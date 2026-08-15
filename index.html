@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kartei Pro 2.0 — Verben mit Präposition · B2 Beruf</title>
+<style>
+:root{--bg:#12100e;--panel:#1c1a17;--panel2:#25221e;--line:#38332d;--tx:#f2ede6;--tx2:#a89f93;
+ --acc:#e8b04b;--ok:#5fb87a;--bad:#d9704f;--new:#6fb3d9}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ line-height:1.5;padding-bottom:50px}
+.wrap{max-width:800px;margin:0 auto;padding:16px}
+header{padding:16px 0 10px;border-bottom:1px solid var(--line);margin-bottom:14px}
+h1{font-size:18px;margin:0 0 3px;letter-spacing:-.2px}
+.sub{color:var(--tx2);font-size:12.5px}
+.tabs{display:flex;gap:6px;margin:14px 0}
+.tab{flex:1;padding:11px 6px;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+ color:var(--tx2);font-size:13px;font-weight:700;text-align:center;cursor:pointer}
+.tab.on{background:var(--acc);color:#1a1611;border-color:var(--acc)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;align-items:center}
+.chip{padding:6px 11px;border-radius:99px;background:var(--panel);border:1px solid var(--line);
+ font-size:12.5px;color:var(--tx2);cursor:pointer;user-select:none}
+.chip.on{color:#fff;font-weight:700}
+.search{font-family:inherit;font-size:13.5px;padding:8px 12px;border-radius:99px;background:var(--panel);
+ color:var(--tx);border:1px solid var(--line);flex:1;min-width:140px}
+.count{font-size:12px;color:var(--tx2);margin-bottom:12px}
+.nest{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--acc);
+ border-radius:12px;padding:14px 16px;margin:16px 0 11px}
+.nhead{display:flex;align-items:baseline;gap:9px;margin-bottom:4px;flex-wrap:wrap}
+.npre{font-size:20px;font-weight:800;letter-spacing:-.3px}
+.nidea{font-size:10.5px;letter-spacing:1.2px;font-weight:800;color:var(--tx2)}
+.nlogic{font-size:13px;color:var(--tx2)}
+.k{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--acc);
+ border-radius:12px;padding:15px 16px;margin-bottom:11px}
+.k h3{margin:0;font-size:18px;letter-spacing:-.2px;display:inline}
+.krek{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:6px;background:var(--panel2);
+ font-size:12px;font-weight:800;color:var(--acc)}
+.kru{font-size:13.5px;color:var(--tx2);margin:4px 0}
+.lat{font-size:19px;font-weight:800;color:var(--new);letter-spacing:.4px;margin:6px 0 2px}
+.lathint{font-size:12px;color:var(--tx2);background:#161d24;border-left:3px solid var(--new);
+ padding:7px 10px;border-radius:0 7px 7px 0;margin-bottom:6px;line-height:1.45}
+.kmeta{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+.tag{font-size:11px;padding:3px 8px;border-radius:6px;background:var(--panel2);color:var(--tx2);border:1px solid var(--line)}
+.tag b{color:var(--tx)}
+.forms{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;color:#cbb98f;
+ background:#241f17;border-radius:7px;padding:8px 10px;margin:9px 0}
+.forms i{font-style:normal;color:#8a7c5e;font-size:10.5px;letter-spacing:.5px}
+.fline{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;margin-top:3px}
+.fline .fw{min-width:150px;color:#e2cf9d}
+.fline .fl{color:var(--new);font-size:11.5px;letter-spacing:.3px}
+.s{margin-top:11px;padding-top:9px;border-top:1px solid var(--line)}
+.st{font-size:10.5px;letter-spacing:1.1px;text-transform:uppercase;color:var(--acc);font-weight:800;margin-bottom:4px}
+.sde{font-size:15px;line-height:1.5}
+.sru{font-size:12.5px;color:var(--tx2)}
+.two{margin-top:7px;padding:9px 11px;background:#1a2620;border-radius:8px;border-left:3px solid var(--ok)}
+.two .lab{font-size:9.5px;letter-spacing:.9px;font-weight:800;color:var(--ok);margin-bottom:1px}
+.two .lab span{color:#6e8a78;font-weight:600;letter-spacing:0}
+.two .txt{font-size:14px}
+.two .row2{margin-top:7px}
+.kontrast{margin-top:11px;padding:11px 12px;background:#1a222b;border-radius:9px;border-left:3px solid var(--new)}
+.kontrast .kt{font-size:10.5px;letter-spacing:1.1px;text-transform:uppercase;color:var(--new);font-weight:800;margin-bottom:7px}
+.kcol{display:flex;gap:10px;flex-wrap:wrap}
+.kcol>div{flex:1;min-width:190px;background:#141b22;border-radius:7px;padding:9px 11px}
+.kcol .h{font-size:13px;font-weight:800;color:var(--new)}
+.kcol .m{font-size:11.5px;color:var(--tx2);margin:2px 0 4px}
+.kcol .e{font-size:13.5px}
+.trap{margin-top:11px;font-size:12.5px;color:#e5c88f;background:#2b2318;border-left:3px solid var(--acc);
+ padding:9px 11px;border-radius:0 8px 8px 0;line-height:1.5}
+.trap b{color:var(--acc);font-size:10.5px;letter-spacing:.9px;text-transform:uppercase}
+.speak{float:right;font-size:11px;padding:5px 10px;border-radius:7px;background:var(--panel2);
+ border:1px solid var(--line);color:var(--acc);cursor:pointer;font-weight:700}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px}
+.row{display:flex;gap:8px;align-items:center;margin-bottom:9px}
+.row label{font-size:12px;color:var(--tx2);min-width:112px}
+select{font-family:inherit;font-size:13.5px;padding:9px;border-radius:9px;background:var(--panel2);
+ color:var(--tx);border:1px solid var(--line);width:100%}
+button{font-family:inherit;font-size:14px;font-weight:700;padding:13px 14px;border-radius:10px;
+ border:1px solid var(--line);background:var(--panel2);color:var(--tx);cursor:pointer;flex:1;min-width:104px}
+button.p{background:var(--acc);color:#1a1611;border-color:var(--acc)}
+button.g{background:#1e3326;color:var(--ok);border-color:#2f4a37}
+button.r{background:#33211c;color:var(--bad);border-color:#4a2f27}
+.btns{display:flex;gap:8px;margin-top:13px;flex-wrap:wrap}
+.bar{height:5px;background:var(--panel2);border-radius:9px;overflow:hidden;margin:12px 0 6px}
+.bar>i{display:block;height:100%;background:var(--acc);width:0;transition:.3s}
+.stat{display:flex;justify-content:space-between;font-size:12px;color:var(--tx2)}
+.big{min-height:148px;display:flex;flex-direction:column;justify-content:center}
+.prompt{font-size:20px;font-weight:600;line-height:1.4}
+.answer{font-size:20px;font-weight:700;color:var(--acc);line-height:1.45;margin-bottom:5px}
+.hint{font-size:11px;color:var(--tx2);letter-spacing:.5px;text-transform:uppercase;margin-bottom:9px}
+.warn{background:#33211c;border:1px solid #4a2f27;color:#e2a58c;padding:12px 14px;border-radius:10px;
+ font-size:12.5px;margin-bottom:12px;line-height:1.6}
+.nowplay{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--tx2);text-align:center;min-height:14px}
+.timer{font-size:38px;font-weight:800;color:var(--acc);text-align:center;font-variant-numeric:tabular-nums;min-height:46px}
+.note{font-size:12px;color:var(--tx2);margin-top:10px;line-height:1.6}
+kbd{background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:11px}
+.mods{display:flex;gap:6px;margin:12px 0 4px}
+.mod{flex:1;padding:12px 8px;background:#161d24;border:1px solid #2b3a45;border-radius:11px;
+ color:#8fa6b5;font-size:13.5px;font-weight:800;text-align:center;cursor:pointer;letter-spacing:.2px}
+.mod.on{background:var(--new);color:#0f1a22;border-color:var(--new)}
+.gloss{margin-top:10px;font-size:12.5px;color:#a9c0cf;background:#151d23;border-left:3px solid #3d6b85;
+ padding:8px 11px;border-radius:0 8px 8px 0;line-height:1.6}
+.gloss b{display:block;color:#6fb3d9;font-size:10px;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+.sw{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--new);
+ border-radius:12px;padding:15px 16px;margin-bottom:11px}
+.sw h3{margin:0;font-size:21px;letter-spacing:-.3px;color:var(--new);display:inline}
+.sw .swlat{font-size:14px;color:#8fa6b5;margin-left:9px}
+.sw .swru{font-size:14px;color:var(--tx);margin:5px 0 0;font-weight:600}
+.sw .swtut{font-size:12.5px;color:var(--tx2);margin-top:6px;line-height:1.55}
+.pairs{display:flex;gap:9px;flex-wrap:wrap;margin-top:11px}
+.pairs>div{flex:1;min-width:190px;border-radius:8px;padding:9px 11px}
+.p-oh{background:#221f1c;border-left:3px solid #6b6257}
+.p-mi{background:#1a2620;border-left:3px solid var(--ok)}
+.pairs .lb{font-size:9.5px;letter-spacing:.9px;font-weight:800;margin-bottom:3px;text-transform:uppercase}
+.p-oh .lb{color:#8b8073} .p-mi .lb{color:var(--ok)}
+.pairs .de{font-size:14px} .pairs .ru{font-size:12px;color:var(--tx2);margin-top:2px}
+.verdict{font-size:15px;font-weight:800;padding:11px 13px;border-radius:9px;margin-bottom:9px}
+.v-ok{background:#1e3326;color:var(--ok);border:1px solid #2f4a37}
+.v-no{background:#33211c;color:var(--bad);border:1px solid #4a2f27}
+.claim{font-size:17px;font-weight:600;line-height:1.45;margin-top:8px}
+.satzde{font-size:18px;font-weight:700;color:var(--acc);line-height:1.45}
+.nojs{background:#2b2318;border:1px solid #4a3f28;color:#e5c88f;padding:12px 14px;
+ border-radius:10px;font-size:12.5px;margin-bottom:14px;line-height:1.6}
+.legend{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 15px;
+ margin-bottom:14px;font-size:12.5px;color:var(--tx2);line-height:1.6}
+.legend b{color:var(--new)}
+</style>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#12100e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kartei Pro">
+<link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Kartei Pro 2.0 — Verben mit Präposition</h1>
+  <div class="sub" id="hdr">32 карточек · 2 гнезда предлогов · 3 формы глагола с транскрипцией · Perfekt и Präteritum · wo-/da-формы</div>
+</header>
+
+<div class="nojs" id="nojs">
+  <b>Режим чтения.</b> Здесь работают только карточки — дрилл, проверка и аудио требуют
+  настоящего браузера. Открой приложение по его адресу, а не как сохранённый файл,
+  и появится всё остальное.
+</div>
+<div class="mods" id="mods" style="display:none">
+  <div class="mod on" data-mod="verben">Глаголы</div>
+  <div class="mod" data-mod="schalt">Переключатели</div>
+</div>
+
+<div id="mod-verben">
+<div class="tabs" id="tabs" style="display:none">
+  <div class="tab on" data-m="kartei">Картотека</div>
+  <div class="tab" data-m="drill">Дрилл</div>
+  <div class="tab" data-m="audio">🎧 Аудио</div>
+</div>
+
+<div class="chips" id="chips"><div class="chip on" style="background: rgb(194, 65, 12); border-color: rgb(194, 65, 12);">auf + Akkusativ</div><div class="chip on" style="background: rgb(124, 63, 158); border-color: rgb(124, 63, 158);">über + Akkusativ</div><div class="chip">все</div></div>
+
+<div id="kartei">
+  <div class="legend">
+    <b>Как читать транскрипцию:</b> ЗАГЛАВНЫЕ — ударный слог · <b>хь</b> — мягкое «х», как в «хихикать» ·
+    <b>ю / ё</b> — ü и ö: губы в одном положении, язык в другом · <b>эа</b> — там, где «р» не звучит, а тает в «а».
+  </div>
+  <input class="search" id="q" placeholder="Поиск: warten, злиться, auf …" style="width:100%;margin-bottom:12px">
+  <div class="count" id="cnt">32 из 32 карточек</div>
+  <div id="list"><div class="nest" style="border-left-color: rgb(194, 65, 12);"><div class="nhead"><span class="npre" style="color:#c2410c">auf + Akkusativ</span><span class="nidea">ЦЕЛЬ, НА КОТОРУЮ НАПРАВЛЕНО ВНИМАНИЕ</span></div><div class="nlogic">Взгляд, ожидание, надежда или усилие нацелены на точку впереди. Отсюда всегда Akkusativ: это движение к цели, а не покой рядом с ней. Русский в этих же местах ставит то родительный («ждать ответа»), то творительный («следить за»), то предложный («сосредоточиться на») — поэтому сбиваешься чаще всего именно здесь.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf0">🔊 вслух</button><h3>achten</h3><span class="krek">auf + Akk</span><div class="kru">обращать внимание на, следить за</div><div class="lat">[АХ-тэн]</div><div class="lathint">ch после a читается твёрдо, как «х» в «ахнуть». Ударение на первый слог.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = обращать внимание НА</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">achtet</span><span class="fl">АХ-тэт</span></div><div class="fline"><span class="fw">achtete</span><span class="fl">АХ-тэ-тэ</span></div><div class="fline"><span class="fw">hat geachtet</span><span class="fl">хат гэ-АХ-тэт</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">In meinen E-Mails achte ich besonders auf den Ton.</div><div class="sru">В своих письмах я особенно слежу за тоном.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Вначале я слишком мало следил за орфографией.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Am Anfang habe ich zu wenig auf die Rechtschreibung geachtet.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Am Anfang achtete ich zu wenig auf die Rechtschreibung.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Achten Sie bitte darauf, dass alle Unterlagen vollständig sind.</div><div class="sru">Проследите, пожалуйста, за тем, чтобы все документы были в полном комплекте.</div></div><div class="gloss"><b>Слова в предложениях</b>der Ton — тон · der Anfang — начало · die Rechtschreibung — орфография · die Unterlagen — документы · vollständig — в полном комплекте</div><div class="trap"><b>Где русский предаёт</b><br>Русское «следить ЗА» — творительный падеж, и рука тянется поставить mit. Нет: auf + Akkusativ. Украинское «звертати увагу НА» здесь твой союзник, предлог совпадает один в один.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf1">🔊 вслух</button><h3>ankommen (es kommt auf … an)</h3><span class="krek">auf + Akk</span><div class="kru">зависеть от, дело в</div><div class="lat">[АН-ко-мэн]</div><div class="lathint">Приставка an- ударная и отделяемая: в предложении она улетает в самый конец — «kommt es … АН».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = зависеть ОТ (не von!)</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">kommt an</span><span class="fl">КОМТ ан</span></div><div class="fline"><span class="fw">kam an</span><span class="fl">КААМ ан</span></div><div class="fline"><span class="fw">ist angekommen</span><span class="fl">ист АН-гэ-ко-мэн</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Bei einer Bewerbung kommt es nicht nur auf die Papiere an.</div><div class="sru">При подаче заявки дело не только в бумагах.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">В этом проекте всё зависело прежде всего от хорошей коммуникации.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Bei diesem Projekt ist es vor allem auf gute Kommunikation angekommen.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Bei diesem Projekt kam es vor allem auf gute Kommunikation an.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Es kommt darauf an, ob der Partner rechtzeitig antwortet.</div><div class="sru">Всё зависит от того, ответит ли партнёр вовремя.</div></div><div class="gloss"><b>Слова в предложениях</b>die Bewerbung — заявка на работу · die Papiere — бумаги, документы · vor allem — прежде всего · rechtzeitig — вовремя</div><div class="trap"><b>Где русский предаёт</b><br>Русское «зависит ОТ» тянет на von — очень сильно и очень настойчиво. Нет: auf + Akkusativ. Оборот «es kommt darauf an, ob …» один из самых частотных на Sprechen, учи его целиком, а не по словам. И запомни: вспомогательный глагол здесь sein, а не haben.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf2">🔊 вслух</button><h3>antworten</h3><span class="krek">auf + Akk</span><div class="kru">отвечать на</div><div class="lat">[АНТ-вор-тэн]</div><div class="lathint">w читается как «в», никогда как «у». Ударение на первый слог.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = отвечать НА вопрос</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">antwortet</span><span class="fl">АНТ-вор-тэт</span></div><div class="fline"><span class="fw">antwortete</span><span class="fl">АНТ-вор-тэ-тэ</span></div><div class="fline"><span class="fw">hat geantwortet</span><span class="fl">хат гэ-АНТ-вор-тэт</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Ich antworte heute noch auf die Mail von der Partnerorganisation.</div><div class="sru">Сегодня же отвечу на письмо от организации-партнёра.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Ведомство неделями не отвечало на моё заявление.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Das Amt hat wochenlang nicht auf meinen Antrag geantwortet.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Das Amt antwortete wochenlang nicht auf meinen Antrag.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Er hat noch nicht darauf geantwortet, ob er zum Treffen kommt.</div><div class="sru">Он ещё не ответил на то, придёт ли он на встречу.</div></div><div class="gloss"><b>Слова в предложениях</b>heute noch — сегодня же · das Amt — ведомство · wochenlang — неделями · der Antrag — заявление · das Treffen — встреча</div><div class="trap"><b>Где русский предаёт</b><br>Тут два управления сразу, и русский их путает. «Ответить КОМУ» — Dativ без предлога: Ich antworte Ihnen. «Ответить НА что» — auf + Akkusativ: auf die Frage. В одном предложении спокойно живут оба: Ich antworte Ihnen auf Ihre Frage.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf3">🔊 вслух</button><h3>aufpassen</h3><span class="krek">auf + Akk</span><div class="kru">присматривать за, следить</div><div class="lat">[АУФ-па-сэн]</div><div class="lathint">au — один слитный звук «ау», не два. Приставка auf- ударная и отделяемая, улетает в конец предложения.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = присматривать ЗА → НА</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">passt auf</span><span class="fl">ПАСТ ауф</span></div><div class="fline"><span class="fw">passte auf</span><span class="fl">ПАС-тэ ауф</span></div><div class="fline"><span class="fw">hat aufgepasst</span><span class="fl">хат АУФ-гэ-паст</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Am Wochenende passe ich auf die Kinder meiner Nachbarn auf.</div><div class="sru">В выходные я присматриваю за детьми моих соседей.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">При переезде никто не присмотрел за коробками.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Beim Umzug hat niemand auf die Kisten aufgepasst.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Beim Umzug passte niemand auf die Kisten auf.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Passen Sie bitte darauf auf, dass die Tür wirklich ins Schloss fällt.</div><div class="sru">Проследите, пожалуйста, за тем, чтобы дверь действительно захлопнулась.</div></div><div class="kontrast"><div class="kt">Контрастная пара</div><div class="kcol"><div><div class="h">achten auf + Akk</div><div class="m">соблюдать норму, держать в поле внимания</div><div class="e">Ich achte auf die Rechtschreibung.</div></div><div><div class="h">aufpassen auf + Akk</div><div class="m">присматривать здесь и сейчас, глазами</div><div class="e">Ich passe auf die Kinder auf.</div></div></div></div><div class="gloss"><b>Слова в предложениях</b>der Nachbar — сосед · der Umzug — переезд · die Kiste — коробка · ins Schloss fallen — захлопнуться (о двери)</div><div class="trap"><b>Где русский предаёт</b><br>Русское «следить ЗА» снова тянет на mit — нет, auf + Akkusativ. А разница с achten такая: achten auf это соблюдать правило или норму, aufpassen auf это присматривать в реальном времени, физически. За детьми — aufpassen. За орфографией — achten.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf4">🔊 вслух</button><h3>sich beziehen</h3><span class="krek">auf + Akk</span><div class="kru">ссылаться на, относиться к</div><div class="lat">[зихь бэ-ЦИ-эн]</div><div class="lathint">z всегда «ц», никогда «з». Приставка be- безударная, ударение падает на -zie-. s перед гласной звучит «з»: sich = «зихь».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = ссылаться НА</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">bezieht sich</span><span class="fl">бэ-ЦИТ зихь</span></div><div class="fline"><span class="fw">bezog sich</span><span class="fl">бэ-ЦООК зихь</span></div><div class="fline"><span class="fw">hat sich bezogen</span><span class="fl">хат зихь бэ-ЦОО-гэн</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Ich beziehe mich auf Ihre Mail vom dritten März.</div><div class="sru">Ссылаюсь на ваше письмо от третьего марта.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">На заседании она несколько раз ссылалась на старый договор.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">In der Sitzung hat sie sich mehrmals auf den alten Vertrag bezogen.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">In der Sitzung bezog sie sich mehrmals auf den alten Vertrag.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Meine Frage bezieht sich darauf, wer die Kosten übernimmt.</div><div class="sru">Мой вопрос касается того, кто берёт на себя расходы.</div></div><div class="gloss"><b>Слова в предложениях</b>die Sitzung — заседание · mehrmals — несколько раз · der Vertrag — договор · die Kosten — расходы · übernehmen — брать на себя</div><div class="trap"><b>Где русский предаёт</b><br>Первое предложение — готовая формула начала делового письма. За такой регистр в Schreiben дают баллы напрямую, поэтому выучи его дословно, как пароль. Глагол сильный, формы неочевидные: bezieht · bezog · bezogen.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf5">🔊 вслух</button><h3>sich bewerben</h3><span class="krek">auf / um + Akk</span><div class="kru">подавать заявку на</div><div class="lat">[зихь бэ-ВЭР-бэн]</div><div class="lathint">w = «в». Приставка be- безударная, ударение на -wer-. В формах корневая гласная скачет: e → i → a → o.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf или um = подавать НА · но фирма — bei + Dat</span><span class="tag">Frage: <b>worauf? / worum?</b></span><span class="tag">da-Form: <b>darauf / darum</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">bewirbt sich</span><span class="fl">бэ-ВИРПТ зихь</span></div><div class="fline"><span class="fw">bewarb sich</span><span class="fl">бэ-ВАРП зихь</span></div><div class="fline"><span class="fw">hat sich beworben</span><span class="fl">хат зихь бэ-ВОР-бэн</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Ich bewerbe mich auf eine Stelle im Projektmanagement.</div><div class="sru">Я подаю заявку на должность в проектном менеджменте.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">В прошлом году я подавал на стипендию.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Letztes Jahr habe ich mich um ein Stipendium beworben.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Letztes Jahr bewarb ich mich um ein Stipendium.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Ich habe mich darum beworben, weil mich die internationale Arbeit interessiert.</div><div class="sru">Я подал на неё заявку, потому что меня интересует международная работа.</div></div><div class="gloss"><b>Слова в предложениях</b>die Stelle — должность, место работы · das Stipendium — стипендия · interessieren — интересовать</div><div class="trap"><b>Где русский предаёт</b><br>Хорошая новость: auf и um здесь оба верны, разницы почти нет, выбирай любой. Плохая: фирма идёт через bei + Dativ — bei einer Firma, bei einer Organisation. Русское «В фирму» тянет на in, и это самая частая ошибка в мотивационных письмах.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf6">🔊 вслух</button><h3>eingehen</h3><span class="krek">auf + Akk</span><div class="kru">откликаться на, вникать в</div><div class="lat">[АЙН-гээн]</div><div class="lathint">ei читается «ай», всегда. Приставка ein- ударная и отделяемая. Два «е» подряд тянутся долго: «ГЭЭ-эн».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = вникнуть В → откликнуться НА</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">geht ein</span><span class="fl">ГЭЭТ айн</span></div><div class="fline"><span class="fw">ging ein</span><span class="fl">ГИНГ айн</span></div><div class="fline"><span class="fw">ist eingegangen</span><span class="fl">ист АЙН-гэ-ган-гэн</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Unser Chef geht selten auf Vorschläge aus dem Team ein.</div><div class="sru">Наш шеф редко откликается на предложения от команды.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">На мой запрос ведомство вообще не отреагировало.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Auf meine Nachfrage ist die Behörde gar nicht eingegangen.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Auf meine Nachfrage ging die Behörde gar nicht ein.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Ich möchte kurz darauf eingehen, warum dieser Punkt für uns wichtig ist.</div><div class="sru">Я хотел бы коротко остановиться на том, почему этот пункт для нас важен.</div></div><div class="gloss"><b>Слова в предложениях</b>selten — редко · der Vorschlag — предложение · die Nachfrage — запрос · die Behörde — ведомство · gar nicht — вообще не</div><div class="trap"><b>Где русский предаёт</b><br>Прямого русского соответствия нет вообще — поэтому не переводи, а учи блоком целиком. Фраза «Ich möchte kurz darauf eingehen, …» это готовое вступление для Sprechen Teil 2 и 3, вставляй её как есть. Вспомогательный глагол — sein.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf7">🔊 вслух</button><h3>sich einigen</h3><span class="krek">auf + Akk</span><div class="kru">договориться о</div><div class="lat">[зихь АЙ-ни-гэн]</div><div class="lathint">ei = «ай». Внимание: ein- здесь НЕ приставка, глагол неотделяемый — поэтому Partizip geeinigt, а не «eingeeinigt».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = о результате · über = о спорном вопросе</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">einigt sich</span><span class="fl">АЙ-нихьт зихь</span></div><div class="fline"><span class="fw">einigte sich</span><span class="fl">АЙ-нихь-тэ зихь</span></div><div class="fline"><span class="fw">hat sich geeinigt</span><span class="fl">хат зихь гэ-АЙ-нихьт</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Wir einigen uns auf einen Termin nach den Ferien.</div><div class="sru">Мы договариваемся о встрече после каникул.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">В итоге обе стороны договорились о компромиссе.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Am Ende haben sich beide Seiten auf einen Kompromiss geeinigt.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Am Ende einigten sich beide Seiten auf einen Kompromiss.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Wir konnten uns nicht darauf einigen, wer das Protokoll schreibt.</div><div class="sru">Мы не смогли договориться о том, кто пишет протокол.</div></div><div class="gloss"><b>Слова в предложениях</b>der Termin — срок, назначенная встреча · die Ferien — каникулы · beide Seiten — обе стороны · das Protokoll — протокол</div><div class="trap"><b>Где русский предаёт</b><br>Здесь оба предлога верны, но означают разное. sich einigen AUF + Akk — сойтись на конкретном результате: auf einen Termin, auf einen Kompromiss. sich einigen ÜBER + Akk — прийти к согласию по спорному вопросу: über den Preis. Русское «договориться О» покрывает оба, поэтому выбирай по смыслу: есть готовый результат — auf, идёт спор о предмете — über. На экзамене в девяти случаях из десяти нужен auf.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf8">🔊 вслух</button><h3>sich freuen</h3><span class="krek">auf + Akk  ↔  über + Akk</span><div class="kru">радоваться / предвкушать</div><div class="lat">[зихь ФРОЙ-эн]</div><div class="lathint">eu читается «ой», не «ей» и не «эу». s перед гласной = «з»: sich звучит «зихь». ü в über — губы трубочкой, а язык как для «и»: «ЮУ-ба».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ (оба)</b></span><span class="tag">auf = ещё впереди · über = уже случилось</span><span class="tag">Frage: <b>worauf? / worüber?</b></span><span class="tag">da-Form: <b>darauf / darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">freut sich</span><span class="fl">ФРОЙТ зихь</span></div><div class="fline"><span class="fw">freute sich</span><span class="fl">ФРОЙ-тэ зихь</span></div><div class="fline"><span class="fw">hat sich gefreut</span><span class="fl">хат зихь гэ-ФРОЙТ</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Ich freue mich schon auf das lange Wochenende.</div><div class="sru">Я уже жду не дождусь длинных выходных.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Коллеги очень обрадовались хорошей новости.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Meine Kollegen haben sich sehr über die gute Nachricht gefreut.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Meine Kollegen freuten sich sehr über die gute Nachricht.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Ich freue mich darauf, dass der Kurs nächste Woche wieder anfängt.</div><div class="sru">Я жду того, что на следующей неделе снова начнётся курс.</div></div><div class="kontrast"><div class="kt">Контрастная пара</div><div class="kcol"><div><div class="h">sich freuen AUF + Akk</div><div class="m">событие впереди — предвкушение</div><div class="e">Ich freue mich auf den Urlaub.</div></div><div><div class="h">sich freuen ÜBER + Akk</div><div class="m">событие уже произошло — радость</div><div class="e">Ich freue mich über das Geschenk.</div></div></div></div><div class="gloss"><b>Слова в предложениях</b>das Wochenende — выходные · die Nachricht — новость, известие · anfangen — начинаться</div><div class="trap"><b>Где русский предаёт</b><br>В русском одно слово «радоваться» покрывает оба случая, поэтому предлог ты выбираешь наугад — пятьдесят на пятьдесят. Немецкий делит по времени. Быстрая проверка: если по-русски просится «жду не дождусь» — это auf. Если просится «обрадовался» — это über.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf9">🔊 вслух</button><h3>hinweisen</h3><span class="krek">auf + Akk</span><div class="kru">указывать на, обращать внимание на</div><div class="lat">[ХИН-вай-зэн]</div><div class="lathint">w = «в», ei = «ай», s между гласными = «з». Приставка hin- ударная и отделяемая.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = указывать НА</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">weist hin</span><span class="fl">ВАЙСТ хин</span></div><div class="fline"><span class="fw">wies hin</span><span class="fl">ВИИС хин</span></div><div class="fline"><span class="fw">hat hingewiesen</span><span class="fl">хат ХИН-гэ-ви-зэн</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Ich weise Sie noch auf die Frist am Monatsende hin.</div><div class="sru">Обращаю ваше внимание ещё и на срок в конце месяца.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Коллега вовремя указал мне на ошибку.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Der Kollege hat mich rechtzeitig auf den Fehler hingewiesen.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Der Kollege wies mich rechtzeitig auf den Fehler hin.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Ich möchte darauf hinweisen, dass die Frist schon morgen endet.</div><div class="sru">Хочу обратить внимание на то, что срок истекает уже завтра.</div></div><div class="gloss"><b>Слова в предложениях</b>die Frist — срок · das Monatsende — конец месяца · rechtzeitig — вовремя · der Fehler — ошибка · enden — заканчиваться</div><div class="trap"><b>Где русский предаёт</b><br>Русское «указывать НА» здесь совпадает — редкий подарок, пользуйся. А фразу «Ich möchte darauf hinweisen, dass …» выучи целиком: это готовое вступление и для Sprechen Teil 3, и для Forumsbeitrag, и экзаменатор ставит баллы именно за такие Redemittel.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf10">🔊 вслух</button><h3>hoffen</h3><span class="krek">auf + Akk</span><div class="kru">надеяться на</div><div class="lat">[ХО-фэн]</div><div class="lathint">Двойное f не удваивается в звуке — оно только укорачивает предыдущую «о». Ударение на первый слог.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = надеяться НА</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">hofft</span><span class="fl">ХОФТ</span></div><div class="fline"><span class="fw">hoffte</span><span class="fl">ХОФ-тэ</span></div><div class="fline"><span class="fw">hat gehofft</span><span class="fl">хат гэ-ХОФТ</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Wir hoffen auf eine schnelle Antwort vom Förderprogramm.</div><div class="sru">Мы надеемся на быстрый ответ от программы финансирования.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Неделями мы надеялись на согласие.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Wochenlang haben wir auf eine Zusage gehofft.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Wochenlang hofften wir auf eine Zusage.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Ich hoffe sehr darauf, dass sich die Lage bald verbessert.</div><div class="sru">Я очень надеюсь на то, что ситуация скоро улучшится.</div></div><div class="gloss"><b>Слова в предложениях</b>die Antwort — ответ · das Förderprogramm — программа финансирования · die Zusage — согласие, одобрение · die Lage — положение · sich verbessern — улучшаться</div><div class="trap"><b>Где русский предаёт</b><br>Здесь русский помогает: «надеяться НА» → auf + Akkusativ, совпадение полное. Отличай от warten auf: hoffen про желание и веру, warten про потраченное время. На согласие можно и hoffen, и warten — но это будут два разных предложения.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf11">🔊 вслух</button><h3>sich konzentrieren</h3><span class="krek">auf + Akk</span><div class="kru">сосредоточиться на</div><div class="lat">[зихь кон-цэн-ТРИИ-рэн]</div><div class="lathint">z = «ц». Все глаголы на -ieren ударны на -IE-, и в Perfekt у них НЕТ приставки ge-: konzentriert, а не «gekonzentriert».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = сосредоточиться НА</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">konzentriert sich</span><span class="fl">кон-цэн-ТРИИРТ зихь</span></div><div class="fline"><span class="fw">konzentrierte sich</span><span class="fl">кон-цэн-ТРИИР-тэ зихь</span></div><div class="fline"><span class="fw">hat sich konzentriert</span><span class="fl">хат зихь кон-цэн-ТРИИРТ</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Im Großraumbüro kann ich mich schlecht auf die Arbeit konzentrieren.</div><div class="sru">В опенспейсе мне плохо удаётся сосредоточиться на работе.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Вчера я едва мог сосредоточиться на тексте.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Gestern habe ich mich kaum auf den Text konzentriert.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Gestern konzentrierte ich mich kaum auf den Text.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Konzentrier dich darauf, was diese Woche wirklich fertig werden muss.</div><div class="sru">Сосредоточься на том, что действительно должно быть готово на этой неделе.</div></div><div class="gloss"><b>Слова в предложениях</b>das Großraumbüro — опенспейс · kaum — едва, почти не · fertig werden — быть готовым</div><div class="trap"><b>Где русский предаёт</b><br>Русское «сосредоточиться НА чём» — предложный падеж, и рука тянется поставить Dativ. Нет: auf + AKKUSATIV. Общее правило по этому гнезду: у auf со всеми этими глаголами всегда Akkusativ, потому что внимание движется к цели, а не покоится на ней.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf12">🔊 вслух</button><h3>reagieren</h3><span class="krek">auf + Akk</span><div class="kru">реагировать на</div><div class="lat">[рэ-а-ГИИ-рэн]</div><div class="lathint">g читается твёрдо «г», не «ж». Ударение на -IE-, приставки ge- в Perfekt нет.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = реагировать НА</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">reagiert</span><span class="fl">рэ-а-ГИИРТ</span></div><div class="fline"><span class="fw">reagierte</span><span class="fl">рэ-а-ГИИР-тэ</span></div><div class="fline"><span class="fw">hat reagiert</span><span class="fl">хат рэ-а-ГИИРТ</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Wie reagiert der Kunde auf unseren neuen Vorschlag?</div><div class="sru">Как клиент реагирует на наше новое предложение?</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Он очень спокойно отреагировал на критику.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Er hat sehr gelassen auf die Kritik reagiert.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Er reagierte sehr gelassen auf die Kritik.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Sie hat nicht darauf reagiert, dass ihr Vorschlag abgelehnt wurde.</div><div class="sru">Она никак не отреагировала на то, что её предложение отклонили.</div></div><div class="gloss"><b>Слова в предложениях</b>der Kunde — клиент · der Vorschlag — предложение · gelassen — спокойно, невозмутимо · ablehnen — отклонять</div><div class="trap"><b>Где русский предаёт</b><br>Русское «реагировать НА» совпадает — калька работает. Держи это как якорь: у reagieren, warten, hoffen, achten и sich verlassen предлог один и тот же — auf. Русский растаскивает их по четырём разным падежам, немецкий видит одно движение.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf13">🔊 вслух</button><h3>sich spezialisieren</h3><span class="krek">auf + Akk</span><div class="kru">специализироваться на</div><div class="lat">[зихь шпэ-ци-а-ли-ЗИИ-рэн]</div><div class="lathint">sp- в начале слова = «шп», не «сп». z = «ц», s между гласными = «з». Ударение на -IE-, ge- в Perfekt нет.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = специализироваться НА</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">spezialisiert sich</span><span class="fl">шпэ-ци-а-ли-ЗИИРТ зихь</span></div><div class="fline"><span class="fw">spezialisierte sich</span><span class="fl">шпэ-ци-а-ли-ЗИИР-тэ зихь</span></div><div class="fline"><span class="fw">hat sich spezialisiert</span><span class="fl">хат зихь шпэ-ци-а-ли-ЗИИРТ</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Unsere Organisation spezialisiert sich auf internationale Projekte.</div><div class="sru">Наша организация специализируется на международных проектах.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">В учёбе я специализировался на анализе данных.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Im Studium habe ich mich auf Datenanalyse spezialisiert.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Im Studium spezialisierte ich mich auf Datenanalyse.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Wir haben uns darauf spezialisiert, kleine Vereine bei Anträgen zu beraten.</div><div class="sru">Мы специализируемся на том, чтобы консультировать небольшие объединения по заявкам.</div></div><div class="gloss"><b>Слова в предложениях</b>das Studium — учёба в вузе · der Verein — объединение, общество · der Antrag — заявка · beraten — консультировать</div><div class="trap"><b>Где русский предаёт</b><br>Русское «специализироваться НА чём» — предложный падеж, снова тянет на Dativ. Нет: auf + Akkusativ. И отдельно про звук: sp- и st- в начале слова немец читает «шп» и «шт». Произнесённое «спе-циа-ли-зирен» — самая заметная примета славянского акцента, слышно с первого слога.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf14">🔊 вслух</button><h3>sich verlassen</h3><span class="krek">auf + Akk</span><div class="kru">полагаться на</div><div class="lat">[зихь фэа-ЛА-сэн]</div><div class="lathint">ver- звучит «фэа»: «р» не рычит, а тает в «а». ss — глухое «с». Ударение на -LA-.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = полагаться НА</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">verlässt sich</span><span class="fl">фэа-ЛЭСТ зихь</span></div><div class="fline"><span class="fw">verließ sich</span><span class="fl">фэа-ЛИИС зихь</span></div><div class="fline"><span class="fw">hat sich verlassen</span><span class="fl">хат зихь фэа-ЛА-сэн</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Auf meine Nachbarn kann ich mich hundertprozentig verlassen.</div><div class="sru">На своих соседей я могу положиться на все сто.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Я положился на его обещание — к сожалению, зря.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Ich habe mich auf seine Zusage verlassen — leider zu Unrecht.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Ich verließ mich auf seine Zusage — leider zu Unrecht.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Sie können sich darauf verlassen, dass die Unterlagen morgen da sind.</div><div class="sru">Вы можете положиться на то, что документы будут завтра.</div></div><div class="gloss"><b>Слова в предложениях</b>der Nachbar — сосед · die Zusage — обещание · zu Unrecht — напрасно, зря · die Unterlagen — документы</div><div class="trap"><b>Где русский предаёт</b><br>Предлог совпадает с русским «положиться НА» — удача. Но будь начеку: без sich это совсем другой глагол. Ich verlasse das Büro значит «я покидаю офис». Одно маленькое sich разводит «полагаться» и «покидать».</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf15">🔊 вслух</button><h3>verzichten</h3><span class="krek">auf + Akk</span><div class="kru">отказываться от</div><div class="lat">[фэа-ЦИХЬ-тэн]</div><div class="lathint">z = всегда «ц», никогда «з». -ich- = мягкое «хь», как в «хихикать», не «х» и не «ш». Приставка ver- = «фэа». Так же ведут себя безударные be-, ge-, er-, zer-, ent-. А вот her- ударная и звучит полным «хеер».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = отказаться ОТ (не von!)</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">verzichtet</span><span class="fl">фэа-ЦИХЬ-тэт</span></div><div class="fline"><span class="fw">verzichtete</span><span class="fl">фэа-ЦИХЬ-тэ-тэ</span></div><div class="fline"><span class="fw">hat verzichtet</span><span class="fl">хат фэа-ЦИХЬ-тэт</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Wegen der hohen Kosten verzichten wir auf die neue Software.</div><div class="sru">Из-за высоких расходов мы отказываемся от новой программы.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Сегодня я отказался от обеденного перерыва, чтобы уйти раньше.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Ich habe heute auf die Mittagspause verzichtet, um früher zu gehen.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Ich verzichtete heute auf die Mittagspause, um früher zu gehen.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Wir haben darauf verzichtet, zusätzliches Personal einzustellen.</div><div class="sru">Мы отказались от того, чтобы нанимать дополнительный персонал.</div></div><div class="gloss"><b>Слова в предложениях</b>wegen — из-за · die Kosten — расходы · die Mittagspause — обеденный перерыв · zusätzlich — дополнительный · das Personal — персонал · einstellen — нанимать</div><div class="trap"><b>Где русский предаёт</b><br>Главная ловушка всего списка, и коварна она вдвойне: русское «отказаться ОТ» и украинское «відмовитися ВІД» тянут в одну и ту же сторону — на von. Оба родных языка здесь неправы, и опереться не на что. Правило не поможет, поможет только звук: скажи вслух verzichten von der Pause, потом verzichten auf die Pause — и так три раза, пока первое не начнёт резать слух.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf16">🔊 вслух</button><h3>sich vorbereiten</h3><span class="krek">auf + Akk</span><div class="kru">готовиться к</div><div class="lat">[зихь ФОР-бэ-рай-тэн]</div><div class="lathint">v = «ф», ei = «ай». Приставка vor- ударная и отделяемая: в предложении улетает в конец.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = готовиться К (не zu!)</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">bereitet sich vor</span><span class="fl">бэ-РАЙ-тэт зихь фор</span></div><div class="fline"><span class="fw">bereitete sich vor</span><span class="fl">бэ-РАЙ-тэ-тэ зихь фор</span></div><div class="fline"><span class="fw">hat sich vorbereitet</span><span class="fl">хат зихь ФОР-бэ-рай-тэт</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Ich bereite mich gerade auf die B2-Prüfung im Januar vor.</div><div class="sru">Я как раз готовлюсь к экзамену B2 в январе.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">К собеседованию я подготовился основательно.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Auf das Vorstellungsgespräch habe ich mich gründlich vorbereitet.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Auf das Vorstellungsgespräch bereitete ich mich gründlich vor.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Ich habe mich nicht darauf vorbereitet, dass die Fragen so offen gestellt werden.</div><div class="sru">Я не был готов к тому, что вопросы будут заданы так открыто.</div></div><div class="gloss"><b>Слова в предложениях</b>gerade — как раз, сейчас · die Prüfung — экзамен · das Vorstellungsgespräch — собеседование · gründlich — основательно · offen — открытый</div><div class="trap"><b>Где русский предаёт</b><br>Русское «готовиться К» тянет на zu, и это выглядит совершенно логично. Нет: auf + Akkusativ. Логика у немецкого своя — подготовка нацелена на событие впереди, а auf и есть направление к цели. Первое предложение, кстати, скажи вслух прямо сейчас: оно про тебя.</div></div><div class="k" style="border-left-color:#c2410c"><button class="speak" data-k="auf17">🔊 вслух</button><h3>warten</h3><span class="krek">auf + Akk</span><div class="kru">ждать</div><div class="lat">[ВАР-тэн]</div><div class="lathint">w читается как «в», никогда как «у». Окончание -en почти проглатывается: «ВАР-тн».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">auf = ждать КОГО / ЧЕГО</span><span class="tag">Frage: <b>worauf?</b></span><span class="tag">da-Form: <b>darauf</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">wartet</span><span class="fl">ВАР-тэт</span></div><div class="fline"><span class="fw">wartete</span><span class="fl">ВАР-тэ-тэ</span></div><div class="fline"><span class="fw">hat gewartet</span><span class="fl">хат гэ-ВАР-тэт</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Ich warte seit zwei Wochen auf eine Antwort vom Amt.</div><div class="sru">Я уже две недели жду ответа из ведомства.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Вчера мы час прождали техника.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Wir haben gestern eine Stunde auf den Techniker gewartet.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Wir warteten gestern eine Stunde auf den Techniker.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Ich warte noch darauf, dass die Firma sich endlich meldet.</div><div class="sru">Я всё ещё жду, когда фирма наконец даст о себе знать.</div></div><div class="gloss"><b>Слова в предложениях</b>seit — с (какого-то момента) · das Amt — ведомство · der Techniker — мастер, техник · sich melden — дать о себе знать · endlich — наконец</div><div class="trap"><b>Где русский предаёт</b><br>Русский говорит «ждать ответА» — родительный падеж без предлога, поэтому рука тянется написать warten eine Antwort. Нет: всегда auf + Akkusativ. А вот украинское «чекати НА відповідь» здесь твой союзник: предлог совпадает один в один. Когда сомневаешься — проговори фразу по-украински.</div></div><div class="nest" style="border-left-color: rgb(124, 63, 158);"><div class="nhead"><span class="npre" style="color:#7c3f9e">über + Akkusativ</span><span class="nidea">ТЕМА, ВОКРУГ КОТОРОЙ КРУЖИТ РЕЧЬ И ЧУВСТВО</span></div><div class="nlogic">über буквально значит «над, поверх». Речь, мысль или эмоция как будто кружат над темой и охватывают её целиком. Отсюда снова Akkusativ: это движение вокруг, а не покой. Практическое следствие: почти всё, что по-русски «о чём-то» в разговоре и «на кого-то» в эмоции, здесь идёт через über.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber0">🔊 вслух</button><h3>sich ärgern</h3><span class="krek">über + Akk</span><div class="kru">злиться на, раздражаться из-за</div><div class="lat">[зихь ЭР-гэан]</div><div class="lathint">ä = «э». g твёрдое. Окончание -ern звучит «эан»: «р» не рычит, а тает.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">über = злиться НА / ИЗ-ЗА</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">ärgert sich</span><span class="fl">ЭР-гэат зихь</span></div><div class="fline"><span class="fw">ärgerte sich</span><span class="fl">ЭР-гэа-тэ зихь</span></div><div class="fline"><span class="fw">hat sich geärgert</span><span class="fl">хат зихь гэ-ЭР-гэат</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Ich ärgere mich jeden Morgen über die verspätete Straßenbahn.</div><div class="sru">Каждое утро я злюсь на опаздывающий трамвай.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Вчера я сильно разозлился на тон в письме.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Gestern habe ich mich sehr über den Ton in der Mail geärgert.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Gestern ärgerte ich mich sehr über den Ton in der Mail.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Sie ärgert sich darüber, dass niemand pünktlich zum Meeting kommt.</div><div class="sru">Она злится из-за того, что никто не приходит на встречу вовремя.</div></div><div class="gloss"><b>Слова в предложениях</b>verspätet — опаздывающий · die Straßenbahn — трамвай · der Ton — тон · pünktlich — вовремя</div><div class="trap"><b>Где русский предаёт</b><br>Русское «злиться НА кого-то» тянет на auf — очень настойчиво. Нет: über + Akkusativ. Разведи по смыслу всё гнездо: auf это цель впереди, über это тема, которая тебя накрыла. Злость всегда про уже случившееся, поэтому über.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber1">🔊 вслух</button><h3>sich beklagen</h3><span class="krek">über + Akk</span><div class="kru">сетовать на, роптать</div><div class="lat">[зихь бэ-КЛАА-гэн]</div><div class="lathint">Приставка be- безударная, ударение на -kla-, и «а» там долгое.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">über = сетовать НА</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">beklagt sich</span><span class="fl">бэ-КЛААКТ зихь</span></div><div class="fline"><span class="fw">beklagte sich</span><span class="fl">бэ-КЛААК-тэ зихь</span></div><div class="fline"><span class="fw">hat sich beklagt</span><span class="fl">хат зихь бэ-КЛААКТ</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Viele Kollegen beklagen sich über die vielen Überstunden.</div><div class="sru">Многие коллеги сетуют на большое количество сверхурочных.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Один клиент пожаловался на наш сервис.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Ein Kunde hat sich über unseren Service beklagt.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Ein Kunde beklagte sich über unseren Service.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Er beklagt sich ständig darüber, dass er zu viel arbeiten muss.</div><div class="sru">Он постоянно сетует на то, что вынужден слишком много работать.</div></div><div class="kontrast"><div class="kt">Контрастная пара</div><div class="kcol"><div><div class="h">sich beklagen über + Akk</div><div class="m">ворчать вслух, часто без адресата</div><div class="e">Er beklagt sich über das Wetter.</div></div><div><div class="h">sich beschweren bei + Dat / über + Akk</div><div class="m">подать официальную жалобу — есть кому</div><div class="e">Er beschwert sich beim Chef über den Lärm.</div></div></div></div><div class="gloss"><b>Слова в предложениях</b>die Überstunden — сверхурочные · der Kunde — клиент · ständig — постоянно</div><div class="trap"><b>Где русский предаёт</b><br>Не путай с sich beschweren, они близкие, но не равные. beklagen — это ворчать вслух, часто вообще ни к кому не обращаясь. beschweren — подать жалобу конкретному лицу, поэтому у него есть второй предлог bei + Dativ. По-русски и то и другое «жаловаться».</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber2">🔊 вслух</button><h3>berichten</h3><span class="krek">über + Akk</span><div class="kru">сообщать о, докладывать о</div><div class="lat">[бэ-РИХЬ-тэн]</div><div class="lathint">Приставка be- безударная. ch после i всегда мягкое: «РИХЬ», не «РИХ».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">über = о (подробно) · von = о (вскользь)</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">berichtet</span><span class="fl">бэ-РИХЬ-тэт</span></div><div class="fline"><span class="fw">berichtete</span><span class="fl">бэ-РИХЬ-тэ-тэ</span></div><div class="fline"><span class="fw">hat berichtet</span><span class="fl">хат бэ-РИХЬ-тэт</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Ich berichte Ihnen kurz über den Stand des Projekts.</div><div class="sru">Я коротко доложу вам о состоянии проекта.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">«Зексише Цайтунг» подробно рассказала о фестивале.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Die Sächsische Zeitung hat ausführlich über das Festival berichtet.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Die Sächsische Zeitung berichtete ausführlich über das Festival.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Er berichtete darüber, wie sich die Lage in den letzten Monaten entwickelt hat.</div><div class="sru">Он рассказал о том, как развивалась ситуация в последние месяцы.</div></div><div class="kontrast"><div class="kt">Контрастная пара</div><div class="kcol"><div><div class="h">berichten über + Akk</div><div class="m">подробно, с фактами — отчёт, статья</div><div class="e">Die Zeitung berichtet über den Vorfall.</div></div><div><div class="h">berichten von + Dat</div><div class="m">вскользь, мимоходом — в разговоре</div><div class="e">Sie berichtet von ihrer Reise.</div></div></div></div><div class="gloss"><b>Слова в предложениях</b>der Stand — состояние, положение дел · ausführlich — подробно · die Lage — ситуация · sich entwickeln — развиваться</div><div class="trap"><b>Где русский предаёт</b><br>Оба предлога переводятся русским «о» — здесь родной язык не помогает вообще, выбирать приходится по смыслу. über + Akkusativ значит подробно и по делу, von + Dativ значит мимоходом. В письменном отчёте на экзамене всегда бери über.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber3">🔊 вслух</button><h3>sich beschweren</h3><span class="krek">bei + Dat / über + Akk</span><div class="kru">жаловаться кому на что</div><div class="lat">[зихь бэ-ШВЭЭ-рэн]</div><div class="lathint">sch = «ш», w = «в». Приставка be- безударная, ударение на -schwe-, «э» там долгое.</div><div class="kmeta"><span class="tag">Fall: <b>Dativ + Akkusativ</b></span><span class="tag">кому — bei + Dat · на что — über + Akk</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">beschwert sich</span><span class="fl">бэ-ШВЭЭРТ зихь</span></div><div class="fline"><span class="fw">beschwerte sich</span><span class="fl">бэ-ШВЭЭР-тэ зихь</span></div><div class="fline"><span class="fw">hat sich beschwert</span><span class="fl">хат зихь бэ-ШВЭЭРТ</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Der Nachbar beschwert sich beim Vermieter über den Lärm.</div><div class="sru">Сосед жалуется арендодателю на шум.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Несколько участников пожаловались на срок, назначенный в последний момент.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Mehrere Teilnehmer haben sich über den kurzfristigen Termin beschwert.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Mehrere Teilnehmer beschwerten sich über den kurzfristigen Termin.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Ich möchte mich darüber beschweren, dass die Pausen nicht eingehalten werden.</div><div class="sru">Я хотел бы пожаловаться на то, что перерывы не соблюдаются.</div></div><div class="gloss"><b>Слова в предложениях</b>der Vermieter — арендодатель · der Lärm — шум · der Teilnehmer — участник · kurzfristig — в последний момент · einhalten — соблюдать</div><div class="trap"><b>Где русский предаёт</b><br>Русское «пожаловаться КОМУ» — дательный падеж, и рука ставит голый Dativ: dem Vermieter. Нет: bei + Dativ. Два предлога в одном предложении — нормально, и порядок свободный: beim Vermieter über den Lärm или über den Lärm beim Vermieter, оба верны.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber4">🔊 вслух</button><h3>diskutieren</h3><span class="krek">über + Akk</span><div class="kru">обсуждать, дискутировать о</div><div class="lat">[дис-ку-ТИИ-рэн]</div><div class="lathint">Ударение на -IE-. В Perfekt приставки ge- нет: diskutiert, а не «gediskutiert».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">о чём — über + Akk · с кем — mit + Dat</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">diskutiert</span><span class="fl">дис-ку-ТИИРТ</span></div><div class="fline"><span class="fw">diskutierte</span><span class="fl">дис-ку-ТИИР-тэ</span></div><div class="fline"><span class="fw">hat diskutiert</span><span class="fl">хат дис-ку-ТИИРТ</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Morgen diskutieren wir im Team über den neuen Zeitplan.</div><div class="sru">Завтра мы в команде обсудим новый график.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Мы долго обсуждали бюджет.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Wir haben lange über das Budget diskutiert.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Wir diskutierten lange über das Budget.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Man diskutiert gerade darüber, ob Homeoffice wirklich produktiver ist.</div><div class="sru">Сейчас обсуждают, действительно ли удалёнка продуктивнее.</div></div><div class="gloss"><b>Слова в предложениях</b>der Zeitplan — график · das Budget — бюджет · gerade — сейчас, как раз</div><div class="trap"><b>Где русский предаёт</b><br>Русское «дискутировать О» совпадает, тут всё просто. Но помни про второе управление: с кем — mit + Dativ. В одном предложении живут оба: Ich diskutiere mit den Kollegen über den Plan.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber5">🔊 вслух</button><h3>erzählen</h3><span class="krek">über + Akk / von + Dat</span><div class="kru">рассказывать о</div><div class="lat">[эа-ЦЭЭ-лэн]</div><div class="lathint">Приставка er- звучит «эа», «р» не рычит. z = «ц». Под ударением долгое «ээ».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">über = отстранённо, по делу · von = теплее, живее</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">erzählt</span><span class="fl">эа-ЦЭЭЛТ</span></div><div class="fline"><span class="fw">erzählte</span><span class="fl">эа-ЦЭЭЛ-тэ</span></div><div class="fline"><span class="fw">hat erzählt</span><span class="fl">хат эа-ЦЭЭЛТ</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Sie erzählt gern über ihre Arbeit in der Organisation.</div><div class="sru">Она охотно рассказывает о своей работе в организации.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">За кофе он много рассказывал о своём первом времени в Дрездене.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Beim Kaffee hat er viel über seine erste Zeit in Dresden erzählt.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Beim Kaffee erzählte er viel über seine erste Zeit in Dresden.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Er hat darüber erzählt, wie schwierig der Anfang hier war.</div><div class="sru">Он рассказал о том, как трудно было здесь вначале.</div></div><div class="gloss"><b>Слова в предложениях</b>gern — охотно · schwierig — трудный · der Anfang — начало</div><div class="trap"><b>Где русский предаёт</b><br>Оба варианта верны, но звучат по-разному: von + Dativ чаще в живой речи и теплее, über + Akkusativ отстранённее и по делу. Русское «о» покрывает оба, поэтому выбирай по тону, а не по переводу. В разговоре с соседом — von, в отчёте — über.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber6">🔊 вслух</button><h3>(sich) informieren</h3><span class="krek">über + Akk</span><div class="kru">узнавать о / сообщать кому-то о</div><div class="lat">[ин-фор-МИИ-рэн]</div><div class="lathint">Ударение на -IE-, приставки ge- в Perfekt нет: informiert.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">über = о (в обоих режимах)</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">informiert (sich)</span><span class="fl">ин-фор-МИИРТ</span></div><div class="fline"><span class="fw">informierte (sich)</span><span class="fl">ин-фор-МИИР-тэ</span></div><div class="fline"><span class="fw">hat (sich) informiert</span><span class="fl">хат ин-фор-МИИРТ</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Vor der Bewerbung informiere ich mich immer über die Organisation.</div><div class="sru">Перед подачей заявки я всегда навожу справки об организации.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Мы вовремя проинформировали партнёров об изменении.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Wir haben die Partner rechtzeitig über die Änderung informiert.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Wir informierten die Partner rechtzeitig über die Änderung.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Bitte informieren Sie sich darüber, welche Unterlagen nötig sind.</div><div class="sru">Пожалуйста, узнайте о том, какие документы нужны.</div></div><div class="kontrast"><div class="kt">Контрастная пара</div><div class="kcol"><div><div class="h">sich informieren über + Akk</div><div class="m">узнавать самому, наводить справки</div><div class="e">Ich informiere mich über die Firma.</div></div><div><div class="h">jemanden informieren über + Akk</div><div class="m">сообщать другому, ставить в известность</div><div class="e">Ich informiere Sie über den Termin.</div></div></div></div><div class="gloss"><b>Слова в предложениях</b>die Bewerbung — подача заявки · rechtzeitig — вовремя · die Änderung — изменение · die Unterlagen — документы · nötig — нужный</div><div class="trap"><b>Где русский предаёт</b><br>Один глагол в двух режимах, и различает их только sich. С sich — узнавать самому. Без sich — сообщать другому. Предлог в обоих случаях über + Akkusativ. Русское «информировать О» совпадает, так что здесь достаточно следить за одним sich.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber7">🔊 вслух</button><h3>lachen</h3><span class="krek">über + Akk</span><div class="kru">смеяться над</div><div class="lat">[ЛА-хэн]</div><div class="lathint">ch после a — твёрдое «х», как в «ахнуть». Ударение на первый слог.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">über = смеяться НАД</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">lacht</span><span class="fl">ЛАХТ</span></div><div class="fline"><span class="fw">lachte</span><span class="fl">ЛАХ-тэ</span></div><div class="fline"><span class="fw">hat gelacht</span><span class="fl">хат гэ-ЛАХТ</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Über diesen Spruch lachen bei uns im Büro alle.</div><div class="sru">Над этой шуткой у нас в бюро смеются все.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">За обедом мы долго смеялись над этой историей.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Beim Mittagessen haben wir lange über die Geschichte gelacht.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Beim Mittagessen lachten wir lange über die Geschichte.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Er lacht immer darüber, wie ernst wir das nehmen.</div><div class="sru">Он всегда смеётся над тем, как серьёзно мы к этому относимся.</div></div><div class="gloss"><b>Слова в предложениях</b>der Spruch — шутка, присказка · das Mittagessen — обед · die Geschichte — история · ernst nehmen — воспринимать всерьёз</div><div class="trap"><b>Где русский предаёт</b><br>Здесь редкий случай: предлог ты угадаешь, а падеж нет. Русское «смеяться НАД» само подсказывает über — и это верно. Но «над кем-то» в русском творительный, поэтому дальше идёт über + Dativ, а нужен Akkusativ. И не путай с auslachen + Akk: это уже «высмеивать кого-то», обидно.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber8">🔊 вслух</button><h3>nachdenken</h3><span class="krek">über + Akk</span><div class="kru">обдумывать, размышлять о</div><div class="lat">[НАХ-дэн-кэн]</div><div class="lathint">ch после a — твёрдое «х». Приставка nach- ударная и отделяемая, улетает в конец предложения.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">über = размышлять НАД / О</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">denkt nach</span><span class="fl">ДЭНКТ нах</span></div><div class="fline"><span class="fw">dachte nach</span><span class="fl">ДАХ-тэ нах</span></div><div class="fline"><span class="fw">hat nachgedacht</span><span class="fl">хат НАХ-гэ-дахт</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Ich denke noch über euren Vorschlag nach.</div><div class="sru">Я ещё обдумываю ваше предложение.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Я всю ночь размышлял над этим предложением.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Ich habe die ganze Nacht über das Angebot nachgedacht.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Ich dachte die ganze Nacht über das Angebot nach.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Ich denke gerade darüber nach, ob sich der Wechsel wirklich lohnt.</div><div class="sru">Я как раз обдумываю, действительно ли смена стоит того.</div></div><div class="kontrast"><div class="kt">Контрастная пара</div><div class="kcol"><div><div class="h">denken an + Akk</div><div class="m">держать в голове, помнить, вспоминать</div><div class="e">Ich denke oft an meine Familie.</div></div><div><div class="h">nachdenken über + Akk</div><div class="m">взвешивать, обдумывать, анализировать</div><div class="e">Ich denke über den Vorschlag nach.</div></div></div></div><div class="gloss"><b>Слова в предложениях</b>der Vorschlag — предложение · das Angebot — предложение (коммерческое) · der Wechsel — смена, переход · sich lohnen — стоить того</div><div class="trap"><b>Где русский предаёт</b><br>Русское «думать О» и «размышлять НАД» — два разных предлога, и оба сбивают. Немецкий делит совсем иначе: denken an значит держать в голове и помнить, nachdenken über значит взвешивать и анализировать. И следи за формами, они неправильные: denkt · dachte · gedacht.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber9">🔊 вслух</button><h3>schimpfen</h3><span class="krek">über + Akk</span><div class="kru">ругать, ворчать на</div><div class="lat">[ШИМ-пфэн]</div><div class="lathint">sch = «ш». pf — один слитный звук: губы смыкаются и сразу идёт выдох, не «п» и «ф» по отдельности.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">über = ворчать НА (за глаза) · mit = отчитывать (в лицо)</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">schimpft</span><span class="fl">ШИМПФТ</span></div><div class="fline"><span class="fw">schimpfte</span><span class="fl">ШИМПФ-тэ</span></div><div class="fline"><span class="fw">hat geschimpft</span><span class="fl">хат гэ-ШИМПФТ</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Mein Nachbar schimpft ständig über die Baustelle vor dem Haus.</div><div class="sru">Мой сосед постоянно ворчит на стройку перед домом.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Весь вечер он ругался на транспорт.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Den ganzen Abend hat er über den Verkehr geschimpft.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Den ganzen Abend schimpfte er über den Verkehr.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Sie schimpft oft darüber, dass alles so lange dauert.</div><div class="sru">Она часто ворчит на то, что всё так долго тянется.</div></div><div class="kontrast"><div class="kt">Контрастная пара</div><div class="kcol"><div><div class="h">schimpfen über + Akk</div><div class="m">ворчать на что-то или на кого-то за глаза</div><div class="e">Er schimpft über den Verkehr.</div></div><div><div class="h">schimpfen mit + Dat</div><div class="m">отчитывать человека прямо в лицо</div><div class="e">Sie schimpft mit ihrem Sohn.</div></div></div></div><div class="gloss"><b>Слова в предложениях</b>der Nachbar — сосед · ständig — постоянно · die Baustelle — стройка · der Verkehr — транспорт, движение · dauern — длиться</div><div class="trap"><b>Где русский предаёт</b><br>Два предлога — две разные ситуации, и русское «ругать» покрывает обе. über + Akkusativ это ворчать за глаза, mit + Dativ это отчитывать человека прямо в лицо. Смотри на ситуацию, а не на перевод: «он ругал сына» и «он ругал погоду» в немецком идут разными предлогами.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber10">🔊 вслух</button><h3>sprechen</h3><span class="krek">über + Akk</span><div class="kru">говорить о</div><div class="lat">[ШПРЭ-хьэн]</div><div class="lathint">sp- в начале = «шп», не «сп». И следи за ch: в sprechen после e он мягкий («хь»), а в sprach и gesprochen после a и o — твёрдый («х»). Один глагол, оба варианта.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">о теме — über + Akk · с человеком — mit + Dat</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">spricht</span><span class="fl">ШПРИХЬТ</span></div><div class="fline"><span class="fw">sprach</span><span class="fl">ШПРААХ</span></div><div class="fline"><span class="fw">hat gesprochen</span><span class="fl">хат гэ-ШПРО-хэн</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Heute sprechen wir im Meeting über die Finanzierung.</div><div class="sru">Сегодня на встрече мы поговорим о финансировании.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Мы уже несколько раз говорили об этой проблеме.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Wir haben schon mehrmals über dieses Problem gesprochen.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Wir sprachen schon mehrmals über dieses Problem.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Sie haben lange darüber gesprochen, wie man das Problem lösen könnte.</div><div class="sru">Они долго говорили о том, как можно было бы решить эту проблему.</div></div><div class="kontrast"><div class="kt">Контрастная пара</div><div class="kcol"><div><div class="h">sprechen über + Akk</div><div class="m">о теме — предметно, по делу</div><div class="e">Wir sprechen über das Budget.</div></div><div><div class="h">sprechen mit + Dat</div><div class="m">с человеком — кто собеседник</div><div class="e">Ich spreche mit dem Chef.</div></div></div></div><div class="gloss"><b>Слова в предложениях</b>die Finanzierung — финансирование · mehrmals — несколько раз · lösen — решать</div><div class="trap"><b>Где русский предаёт</b><br>У sprechen целых три управления: über + Akk это о теме, mit + Dat это с человеком, von + Dat это о ком-то вскользь. Русское «говорить С» и «говорить О» разводит их так же — здесь родной язык впервые за это гнездо помогает. В одном предложении спокойно живут два: Ich spreche mit dem Chef über den Urlaub.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber11">🔊 вслух</button><h3>(sich) streiten</h3><span class="krek">über + Akk</span><div class="kru">спорить о, ссориться</div><div class="lat">[ШТРАЙ-тэн]</div><div class="lathint">st- в начале слова = «шт», не «ст». ei = «ай».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">über = спорить О теме · um = спорить ИЗ-ЗА объекта</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">streitet (sich)</span><span class="fl">ШТРАЙ-тэт</span></div><div class="fline"><span class="fw">stritt (sich)</span><span class="fl">ШТРИТ</span></div><div class="fline"><span class="fw">hat (sich) gestritten</span><span class="fl">хат гэ-ШТРИ-тэн</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Im Verein streiten alle über die gleiche alte Frage.</div><div class="sru">В объединении все спорят об одном и том же старом вопросе.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Вчера мы поспорили о планировании поездки.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Gestern haben wir uns über die Reiseplanung gestritten.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Gestern stritten wir uns über die Reiseplanung.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Wir streiten oft darüber, wer welche Aufgabe übernimmt.</div><div class="sru">Мы часто спорим о том, кто какую задачу берёт.</div></div><div class="kontrast"><div class="kt">Контрастная пара</div><div class="kcol"><div><div class="h">streiten über + Akk</div><div class="m">спорить о теме — кто прав</div><div class="e">Sie streiten über Politik.</div></div><div><div class="h">streiten um + Akk</div><div class="m">спорить из-за объекта — кому достанется</div><div class="e">Sie streiten um den Parkplatz.</div></div></div></div><div class="gloss"><b>Слова в предложениях</b>der Verein — объединение · die gleiche — тот же самый · die Reiseplanung — планирование поездки · die Aufgabe — задача · übernehmen — брать на себя</div><div class="trap"><b>Где русский предаёт</b><br>über + Akk это спорить о теме, о том, кто прав. um + Akk это бороться за объект: um das Geld, um den Parkplatz. Русское «спорить о» и «спорить из-за» разводит похоже, так что здесь можно опереться на родной язык. Формы сильные и короткие: streitet · stritt · gestritten.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber12">🔊 вслух</button><h3>sich unterhalten</h3><span class="krek">über + Akk</span><div class="kru">беседовать о</div><div class="lat">[зихь ун-та-ХАЛ-тэн]</div><div class="lathint">-ter- звучит «та», «р» тает. Приставка unter- здесь НЕотделяемая: ударение на -hal-, и в Perfekt нет ge- — unterhalten, а не «untergehalten».</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">о чём — über + Akk · с кем — mit + Dat</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">unterhält sich</span><span class="fl">ун-та-ХЭЛТ зихь</span></div><div class="fline"><span class="fw">unterhielt sich</span><span class="fl">ун-та-ХИИЛТ зихь</span></div><div class="fline"><span class="fw">hat sich unterhalten</span><span class="fl">хат зихь ун-та-ХАЛ-тэн</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Nach dem Kurs unterhalten wir uns oft über Politik.</div><div class="sru">После курса мы часто беседуем о политике.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Вчера мы долго беседовали о положении в отрасли.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Gestern haben wir uns lange über die Lage in der Branche unterhalten.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Gestern unterhielten wir uns lange über die Lage in der Branche.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Sie unterhalten sich oft darüber, wie sich die Stadt verändert.</div><div class="sru">Они часто беседуют о том, как меняется город.</div></div><div class="gloss"><b>Слова в предложениях</b>der Kurs — курс · die Lage — положение · die Branche — отрасль · sich verändern — меняться</div><div class="trap"><b>Где русский предаёт</b><br>sich unterhalten это именно приятная беседа — не спор и не деловые переговоры. И sich обязательно: без него unterhalten значит развлекать или содержать. Er unterhält die Gäste — он развлекает гостей. Er unterhält sich mit den Gästen — он с ними беседует.</div></div><div class="k" style="border-left-color:#7c3f9e"><button class="speak" data-k="ueber13">🔊 вслух</button><h3>sich wundern</h3><span class="krek">über + Akk</span><div class="kru">удивляться</div><div class="lat">[зихь ВУН-дэан]</div><div class="lathint">w = «в». Окончание -ern звучит «эан»: «р» тает в «а», как и в -er на конце.</div><div class="kmeta"><span class="tag">Fall: <b>Akkusativ</b></span><span class="tag">über = удивляться ЧЕМУ → НАД</span><span class="tag">Frage: <b>worüber?</b></span><span class="tag">da-Form: <b>darüber</b></span></div><div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i><div class="fline"><span class="fw">wundert sich</span><span class="fl">ВУН-дэат зихь</span></div><div class="fline"><span class="fw">wunderte sich</span><span class="fl">ВУН-дэа-тэ зихь</span></div><div class="fline"><span class="fw">hat sich gewundert</span><span class="fl">хат зихь гэ-ВУН-дэат</span></div></div><div class="s"><div class="st">Einfach (Nomen-Objekt)</div><div class="sde">Ich wundere mich über die vielen Formulare hier.</div><div class="sru">Я удивляюсь количеству формуляров здесь.</div></div><div class="s"><div class="st">Vergangenheit — обе формы</div><div class="sru" style="margin-bottom:5px">Я очень удивился его реакции.</div><div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div><div class="txt">Ich habe mich sehr über seine Reaktion gewundert.</div><div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div><div class="txt">Ich wunderte mich sehr über seine Reaktion.</div></div></div></div><div class="s"><div class="st">B2/C1 — mit Nebensatz</div><div class="sde">Ich wundere mich darüber, warum niemand etwas gesagt hat.</div><div class="sru">Меня удивляет, почему никто ничего не сказал.</div></div><div class="gloss"><b>Слова в предложениях</b>das Formular — формуляр, бланк · die Reaktion — реакция · niemand — никто</div><div class="trap"><b>Где русский предаёт</b><br>Русское «удивляться ЧЕМУ» — дательный падеж без всякого предлога, поэтому предлог просто не приходит в голову, и получается «ich wundere mich seine Reaktion». Нет: всегда über + Akkusativ. Плюс обязательное sich — без него глагол не работает вовсе.</div></div></div>
+</div>
+
+<div id="drill" style="display:none">
+  <div class="card">
+    <div class="row"><label>Что спрашивать</label><select id="dmode">
+      <option value="s1">Предложение — Einfach</option>
+      <option value="perf">Предложение — Perfekt</option>
+      <option value="prat">Предложение — Präteritum</option>
+      <option value="s3">Предложение — B2/C1 Nebensatz</option>
+      <option value="mix" selected>Вперемешку, все уровни</option>
+      <option value="rek">Управление: глагол → предлог + падеж</option>
+      <option value="forms">Три формы глагола</option>
+      <option value="lat">Произношение: глагол → транскрипция</option>
+    </select></div>
+    <div class="bar"><i id="pbar"></i></div>
+    <div class="stat"><span id="pcount">—</span><span id="pdone">—</span></div>
+  </div>
+  <div class="card">
+    <div class="big" id="dbody"></div>
+    <div class="btns" id="dbtns"></div>
+  </div>
+  <div class="note">Сначала <b>скажи вслух</b>, потом открывай ответ. Прочитал глазами — не считается.<br>
+  Клавиши: <kbd>Пробел</kbd> открыть · <kbd>1</kbd> не знал · <kbd>2</kbd> знал.</div>
+</div>
+
+<div id="audio" style="display:none">
+  <div id="voicewarn"></div>
+  <div class="card">
+    <div class="row"><label>Режим</label><select id="amode">
+      <option value="full">Карточка целиком (для дороги)</option>
+      <option value="satz" selected>Предложения: рус → пауза → нем</option>
+      <option value="rek">Управление: глагол → пауза → предлог</option>
+      <option value="forms">Три формы глагола</option>
+      <option value="past">Präteritum ↔ Perfekt</option>
+      <option value="deonly">Только немецкий (Shadowing)</option>
+    </select></div>
+    <div class="row"><label>Уровень фраз</label><select id="alevel">
+      <option value="s1">Einfach</option><option value="s2">Vergangenheit</option>
+      <option value="s3">B2/C1 Nebensatz</option><option value="all" selected>Все три</option>
+    </select></div>
+    <div class="row"><label>Пауза на ответ</label><select id="gap">
+      <option value="3">3 сек</option><option value="5" selected>5 сек</option>
+      <option value="7">7 сек</option><option value="10">10 сек</option></select></div>
+    <div class="row"><label>Темп немецкого</label><select id="rate">
+      <option value="0.7">очень медленно</option><option value="0.85" selected>медленно</option>
+      <option value="1">обычный</option><option value="1.15">быстро</option></select></div>
+    <div class="row"><label>Повтор немецкого</label><select id="rep">
+      <option value="1">1 раз</option><option value="2" selected>2 раза</option><option value="3">3 раза</option></select></div>
+    <div class="row"><label>Немецкий голос</label><select id="vde"></select></div>
+    <div class="row"><label>Русский голос</label><select id="vru"></select></div>
+  </div>
+  <div class="card">
+    <div class="nowplay" id="anow"></div>
+    <div class="timer" id="atimer">—</div>
+    <div class="big" id="abody" style="min-height:118px"></div>
+    <div class="btns"><button class="p" id="aplay">▶ Старт</button><button id="askip">Дальше ⏭</button></div>
+  </div>
+  <div class="note"><b>Для дороги:</b> нажми Старт, положи телефон в карман, говори вслух в паузу.
+  Приложение само просит систему не гасить экран — но браузер останавливает звук вместе с экраном,
+  поэтому на всякий случай поставь автоблокировку подольше.</div>
+</div>
+
+</div><!-- /mod-verben -->
+
+<div id="mod-schalt">
+  <div class="tabs" id="stabs" style="display:none">
+    <div class="stab on" data-s="sliste">Список</div>
+    <div class="stab" data-s="scheck">Проверка</div>
+  </div>
+  <div id="sliste">
+    <div class="legend">Маленькие слова, которые не про тему — но переворачивают смысл фразы.
+    Их проскакивают глазами именно потому, что они короткие. Каждое стоит целого предложения.</div>
+    <div id="slist"><div class="sw"><button class="speak" data-sw="0">🔊 вслух</button><h3>pro / je</h3><span class="swlat">[проо / йее]</span><div class="swru">за каждый, в расчёте на</div><div class="swtut">Превращает число в норму. Само число не меняется — меняется, к чему оно относится.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Der Kaffee kostet 4 Euro.</div><div class="ru">Кофе стоит 4 евро.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Der Kaffee kostet 4 Euro pro Tag.</div><div class="ru">Кофе стоит 4 евро в день.</div></div></div></div><div class="sw"><button class="speak" data-sw="1">🔊 вслух</button><h3>jeweils</h3><span class="swlat">[ЙЭ-вайльс]</span><div class="swru">каждый раз по, соответственно</div><div class="swtut">Показывает, что число повторяется, а не даётся один раз.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Wir treffen uns für 2 Stunden.</div><div class="ru">Мы встречаемся на 2 часа.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Wir treffen uns jeweils 2 Stunden.</div><div class="ru">Мы встречаемся каждый раз по 2 часа.</div></div></div></div><div class="sw"><button class="speak" data-sw="2">🔊 вслух</button><h3>mindestens</h3><span class="swlat">[МИН-дэс-тэнс]</span><div class="swru">не менее, минимум</div><div class="swtut">Ставит нижнюю границу. Всё, что больше, тоже подходит.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Man braucht 3 Jahre Erfahrung.</div><div class="ru">Нужно 3 года опыта.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Man braucht mindestens 3 Jahre Erfahrung.</div><div class="ru">Нужно не менее 3 лет опыта.</div></div></div></div><div class="sw"><button class="speak" data-sw="3">🔊 вслух</button><h3>höchstens</h3><span class="swlat">[ХЁХЬС-тэнс]</span><div class="swru">не более, максимум</div><div class="swtut">Ставит верхнюю границу. Противоположность mindestens.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Der Text hat 100 Wörter.</div><div class="ru">В тексте 100 слов.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Der Text hat höchstens 100 Wörter.</div><div class="ru">В тексте не более 100 слов.</div></div></div></div><div class="sw"><button class="speak" data-sw="4">🔊 вслух</button><h3>spätestens</h3><span class="swlat">[ШПЭЭ-тэс-тэнс]</span><div class="swru">не позднее, крайний срок</div><div class="swtut">Задаёт последний допустимый момент. Раньше можно, позже нельзя.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Geben Sie das Formular am Freitag ab.</div><div class="ru">Сдайте формуляр в пятницу.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Geben Sie das Formular spätestens am Freitag ab.</div><div class="ru">Сдайте формуляр не позднее пятницы.</div></div></div></div><div class="sw"><button class="speak" data-sw="5">🔊 вслух</button><h3>frühestens</h3><span class="swlat">[ФРЮЮ-эс-тэнс]</span><div class="swru">не ранее</div><div class="swtut">Задаёт первый допустимый момент. Зеркало к spätestens.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Der Kurs beginnt im September.</div><div class="ru">Курс начинается в сентябре.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Der Kurs beginnt frühestens im September.</div><div class="ru">Курс начнётся не раньше сентября.</div></div></div></div><div class="sw"><button class="speak" data-sw="6">🔊 вслух</button><h3>ab</h3><span class="swlat">[ап]</span><div class="swru">начиная с</div><div class="swtut">Открывает промежуток вперёд: с этого момента и дальше.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Die Regel gilt im Mai.</div><div class="ru">Правило действует в мае.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Die Regel gilt ab Mai.</div><div class="ru">Правило действует с мая и далее.</div></div></div></div><div class="sw"><button class="speak" data-sw="7">🔊 вслух</button><h3>bis</h3><span class="swlat">[бис]</span><div class="swru">до, включительно</div><div class="swtut">Закрывает промежуток. Зеркало к ab.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Wir arbeiten am Freitag.</div><div class="ru">Мы работаем в пятницу.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Wir arbeiten bis Freitag.</div><div class="ru">Мы работаем до пятницы.</div></div></div></div><div class="sw"><button class="speak" data-sw="8">🔊 вслух</button><h3>außer</h3><span class="swlat">[АУ-са]</span><div class="swru">кроме, за исключением</div><div class="swtut">Вырезает исключение из общего правила. Легко проскочить и понять фразу наоборот.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Das Büro ist täglich geöffnet.</div><div class="ru">Офис открыт ежедневно.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Das Büro ist täglich außer sonntags geöffnet.</div><div class="ru">Офис открыт ежедневно, кроме воскресенья.</div></div></div></div><div class="sw"><button class="speak" data-sw="9">🔊 вслух</button><h3>insgesamt</h3><span class="swlat">[инс-гэ-ЗАМТ]</span><div class="swru">в общей сложности, всего</div><div class="swtut">Показывает сумму, а не разовую величину. Прямая противоположность pro и jeweils.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Die Fortbildung dauert 20 Stunden.</div><div class="ru">Обучение длится 20 часов.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Die Fortbildung dauert insgesamt 20 Stunden.</div><div class="ru">Обучение длится 20 часов в общей сложности.</div></div></div></div><div class="sw"><button class="speak" data-sw="10">🔊 вслух</button><h3>zusätzlich</h3><span class="swlat">[цу-ЗЭЦ-лихь]</span><div class="swru">дополнительно, сверх того</div><div class="swtut">Добавляет к тому, что уже есть. Не заменяет — прибавляет.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Sie bekommen 100 Euro.</div><div class="ru">Вы получите 100 евро.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Sie bekommen zusätzlich 100 Euro.</div><div class="ru">Вы получите ещё 100 евро сверх того.</div></div></div></div><div class="sw"><button class="speak" data-sw="11">🔊 вслух</button><h3>statt</h3><span class="swlat">[штат]</span><div class="swru">вместо</div><div class="swtut">Заменяет одно другим. Противоположность zusätzlich: не плюс, а вместо.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Wir machen eine Videokonferenz.</div><div class="ru">Мы проведём видеоконференцию.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Wir machen eine Videokonferenz statt eines Treffens.</div><div class="ru">Мы проведём видеоконференцию вместо встречи.</div></div></div></div><div class="sw"><button class="speak" data-sw="12">🔊 вслух</button><h3>kaum</h3><span class="swlat">[каум]</span><div class="swru">почти не, едва</div><div class="swtut">СКРЫТОЕ ОТРИЦАНИЕ. Выглядит нейтрально, а означает «почти нет». Пропустил — понял фразу наоборот.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Die Kollegen nutzen das Programm.</div><div class="ru">Коллеги пользуются программой.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Die Kollegen nutzen das Programm kaum.</div><div class="ru">Коллеги почти не пользуются программой.</div></div></div></div><div class="sw"><button class="speak" data-sw="13">🔊 вслух</button><h3>selten</h3><span class="swlat">[ЗЭЛЬ-тэн]</span><div class="swru">редко</div><div class="swtut">Тоже почти отрицание. Не «иногда», а «почти никогда».</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Der Chef geht auf Vorschläge ein.</div><div class="ru">Шеф откликается на предложения.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Der Chef geht selten auf Vorschläge ein.</div><div class="ru">Шеф редко откликается на предложения.</div></div></div></div><div class="sw"><button class="speak" data-sw="14">🔊 вслух</button><h3>ausschließlich</h3><span class="swlat">[аус-ШЛИИС-лихь]</span><div class="swru">исключительно, только</div><div class="swtut">Отсекает всё остальное. Сильнее, чем nur, и звучит официальнее.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Die Stelle ist für Fachkräfte.</div><div class="ru">Должность для специалистов.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Die Stelle ist ausschließlich für Fachkräfte.</div><div class="ru">Должность только для специалистов, и ни для кого больше.</div></div></div></div><div class="sw"><button class="speak" data-sw="15">🔊 вслух</button><h3>überwiegend</h3><span class="swlat">[юю-ба-ВИИ-гэнт]</span><div class="swru">преимущественно, в основном</div><div class="swtut">Большинство, но не все. Легко принять за «все» и ошибиться.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Die Teilnehmer kommen aus Sachsen.</div><div class="ru">Участники из Саксонии.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Die Teilnehmer kommen überwiegend aus Sachsen.</div><div class="ru">Участники в основном из Саксонии.</div></div></div></div><div class="sw"><button class="speak" data-sw="16">🔊 вслух</button><h3>erst</h3><span class="swlat">[эаст]</span><div class="swru">только (о времени), не раньше чем</div><div class="swtut">Не путать с nur. erst — про время: позже, чем ожидалось. nur — про количество.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Der Bus kommt um 18 Uhr.</div><div class="ru">Автобус придёт в 18 часов.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Der Bus kommt erst um 18 Uhr.</div><div class="ru">Автобус придёт только в 18 часов, не раньше.</div></div></div></div><div class="sw"><button class="speak" data-sw="17">🔊 вслух</button><h3>weder … noch</h3><span class="swlat">[ВЭЭ-да … нох]</span><div class="swru">ни … ни</div><div class="swtut">Отрицает сразу оба варианта. Само слово nicht при этом не появляется.</div><div class="pairs"><div class="p-oh"><div class="lb">без него</div><div class="de">Er spricht Englisch und Französisch.</div><div class="ru">Он говорит по-английски и по-французски.</div></div><div class="p-mi"><div class="lb">с ним</div><div class="de">Er spricht weder Englisch noch Französisch.</div><div class="ru">Он не говорит ни по-английски, ни по-французски.</div></div></div></div></div>
+  </div>
+  <div id="scheck" style="display:none">
+    <div class="card">
+      <div class="bar"><i id="sbar"></i></div>
+      <div class="stat"><span id="scount">—</span><span id="sdone">—</span></div>
+    </div>
+    <div class="card">
+      <div class="big" id="sbody"></div>
+      <div class="btns" id="sbtns"></div>
+    </div>
+    <div class="note">Читаешь немецкую фразу, читаешь утверждение под ней — и решаешь,
+    верно оно или нет. Это ровно та операция, которую делает Lesen.</div>
+  </div>
+</div>
+
+</div>
+<script>
+var NESTS = [
+{
+ id:"auf", prep:"auf + Akkusativ", idea:"ЦЕЛЬ, НА КОТОРУЮ НАПРАВЛЕНО ВНИМАНИЕ", hue:"#c2410c",
+ logic:"Взгляд, ожидание, надежда или усилие нацелены на точку впереди. Отсюда всегда Akkusativ: это движение к цели, а не покой рядом с ней. Русский в этих же местах ставит то родительный («ждать ответа»), то творительный («следить за»), то предложный («сосредоточиться на») — поэтому сбиваешься чаще всего именно здесь.",
+ verbs:[
+
+ {de:"achten", ru:"обращать внимание на, следить за", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = обращать внимание НА",
+  lat:{v:"АХ-тэн", hint:"ch после a читается твёрдо, как «х» в «ахнуть». Ударение на первый слог."},
+  forms:{pra:"achtet", praL:"АХ-тэт", prat:"achtete", pratL:"АХ-тэ-тэ", perf:"hat geachtet", perfL:"хат гэ-АХ-тэт"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"In meinen E-Mails achte ich besonders auf den Ton.", ru:"В своих письмах я особенно слежу за тоном."},
+  s2:{perf:"Am Anfang habe ich zu wenig auf die Rechtschreibung geachtet.",
+      prat:"Am Anfang achtete ich zu wenig auf die Rechtschreibung.",
+      ru:"Вначале я слишком мало следил за орфографией."},
+  s3:{de:"Achten Sie bitte darauf, dass alle Unterlagen vollständig sind.", ru:"Проследите, пожалуйста, за тем, чтобы все документы были в полном комплекте."},
+  trap:"Русское «следить ЗА» — творительный падеж, и рука тянется поставить mit. Нет: auf + Akkusativ. Украинское «звертати увагу НА» здесь твой союзник, предлог совпадает один в один."},
+
+ {de:"ankommen (es kommt auf … an)", ru:"зависеть от, дело в", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = зависеть ОТ (не von!)",
+  lat:{v:"АН-ко-мэн", hint:"Приставка an- ударная и отделяемая: в предложении она улетает в самый конец — «kommt es … АН»."},
+  forms:{pra:"kommt an", praL:"КОМТ ан", prat:"kam an", pratL:"КААМ ан", perf:"ist angekommen", perfL:"ист АН-гэ-ко-мэн"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Bei einer Bewerbung kommt es nicht nur auf die Papiere an.", ru:"При подаче заявки дело не только в бумагах."},
+  s2:{perf:"Bei diesem Projekt ist es vor allem auf gute Kommunikation angekommen.",
+      prat:"Bei diesem Projekt kam es vor allem auf gute Kommunikation an.",
+      ru:"В этом проекте всё зависело прежде всего от хорошей коммуникации."},
+  s3:{de:"Es kommt darauf an, ob der Partner rechtzeitig antwortet.", ru:"Всё зависит от того, ответит ли партнёр вовремя."},
+  trap:"Русское «зависит ОТ» тянет на von — очень сильно и очень настойчиво. Нет: auf + Akkusativ. Оборот «es kommt darauf an, ob …» один из самых частотных на Sprechen, учи его целиком, а не по словам. И запомни: вспомогательный глагол здесь sein, а не haben."},
+
+ {de:"antworten", ru:"отвечать на", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = отвечать НА вопрос",
+  lat:{v:"АНТ-вор-тэн", hint:"w читается как «в», никогда как «у». Ударение на первый слог."},
+  forms:{pra:"antwortet", praL:"АНТ-вор-тэт", prat:"antwortete", pratL:"АНТ-вор-тэ-тэ", perf:"hat geantwortet", perfL:"хат гэ-АНТ-вор-тэт"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Ich antworte heute noch auf die Mail von der Partnerorganisation.", ru:"Сегодня же отвечу на письмо от организации-партнёра."},
+  s2:{perf:"Das Amt hat wochenlang nicht auf meinen Antrag geantwortet.",
+      prat:"Das Amt antwortete wochenlang nicht auf meinen Antrag.",
+      ru:"Ведомство неделями не отвечало на моё заявление."},
+  s3:{de:"Er hat noch nicht darauf geantwortet, ob er zum Treffen kommt.", ru:"Он ещё не ответил на то, придёт ли он на встречу."},
+  trap:"Тут два управления сразу, и русский их путает. «Ответить КОМУ» — Dativ без предлога: Ich antworte Ihnen. «Ответить НА что» — auf + Akkusativ: auf die Frage. В одном предложении спокойно живут оба: Ich antworte Ihnen auf Ihre Frage."},
+
+ {de:"aufpassen", ru:"присматривать за, следить", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = присматривать ЗА → НА",
+  lat:{v:"АУФ-па-сэн", hint:"au — один слитный звук «ау», не два. Приставка auf- ударная и отделяемая, улетает в конец предложения."},
+  forms:{pra:"passt auf", praL:"ПАСТ ауф", prat:"passte auf", pratL:"ПАС-тэ ауф", perf:"hat aufgepasst", perfL:"хат АУФ-гэ-паст"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Am Wochenende passe ich auf die Kinder meiner Nachbarn auf.", ru:"В выходные я присматриваю за детьми моих соседей."},
+  s2:{perf:"Beim Umzug hat niemand auf die Kisten aufgepasst.",
+      prat:"Beim Umzug passte niemand auf die Kisten auf.",
+      ru:"При переезде никто не присмотрел за коробками."},
+  s3:{de:"Passen Sie bitte darauf auf, dass die Tür wirklich ins Schloss fällt.", ru:"Проследите, пожалуйста, за тем, чтобы дверь действительно захлопнулась."},
+  kontrast:{aH:"achten auf + Akk", aM:"соблюдать норму, держать в поле внимания", aE:"Ich achte auf die Rechtschreibung.",
+            bH:"aufpassen auf + Akk", bM:"присматривать здесь и сейчас, глазами", bE:"Ich passe auf die Kinder auf."},
+  trap:"Русское «следить ЗА» снова тянет на mit — нет, auf + Akkusativ. А разница с achten такая: achten auf это соблюдать правило или норму, aufpassen auf это присматривать в реальном времени, физически. За детьми — aufpassen. За орфографией — achten."},
+
+ {de:"sich beziehen", ru:"ссылаться на, относиться к", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = ссылаться НА",
+  lat:{v:"зихь бэ-ЦИ-эн", hint:"z всегда «ц», никогда «з». Приставка be- безударная, ударение падает на -zie-. s перед гласной звучит «з»: sich = «зихь»."},
+  forms:{pra:"bezieht sich", praL:"бэ-ЦИТ зихь", prat:"bezog sich", pratL:"бэ-ЦООК зихь", perf:"hat sich bezogen", perfL:"хат зихь бэ-ЦОО-гэн"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Ich beziehe mich auf Ihre Mail vom dritten März.", ru:"Ссылаюсь на ваше письмо от третьего марта."},
+  s2:{perf:"In der Sitzung hat sie sich mehrmals auf den alten Vertrag bezogen.",
+      prat:"In der Sitzung bezog sie sich mehrmals auf den alten Vertrag.",
+      ru:"На заседании она несколько раз ссылалась на старый договор."},
+  s3:{de:"Meine Frage bezieht sich darauf, wer die Kosten übernimmt.", ru:"Мой вопрос касается того, кто берёт на себя расходы."},
+  trap:"Первое предложение — готовая формула начала делового письма. За такой регистр в Schreiben дают баллы напрямую, поэтому выучи его дословно, как пароль. Глагол сильный, формы неочевидные: bezieht · bezog · bezogen."},
+
+ {de:"sich bewerben", ru:"подавать заявку на", rek:"auf / um + Akk", kasus:"Akkusativ",
+  prep:"auf или um = подавать НА · но фирма — bei + Dat",
+  lat:{v:"зихь бэ-ВЭР-бэн", hint:"w = «в». Приставка be- безударная, ударение на -wer-. В формах корневая гласная скачет: e → i → a → o."},
+  forms:{pra:"bewirbt sich", praL:"бэ-ВИРПТ зихь", prat:"bewarb sich", pratL:"бэ-ВАРП зихь", perf:"hat sich beworben", perfL:"хат зихь бэ-ВОР-бэн"},
+  wo:"worauf? / worum?", da:"darauf / darum",
+  s1:{de:"Ich bewerbe mich auf eine Stelle im Projektmanagement.", ru:"Я подаю заявку на должность в проектном менеджменте."},
+  s2:{perf:"Letztes Jahr habe ich mich um ein Stipendium beworben.",
+      prat:"Letztes Jahr bewarb ich mich um ein Stipendium.",
+      ru:"В прошлом году я подавал на стипендию."},
+  s3:{de:"Ich habe mich darum beworben, weil mich die internationale Arbeit interessiert.", ru:"Я подал на неё заявку, потому что меня интересует международная работа."},
+  trap:"Хорошая новость: auf и um здесь оба верны, разницы почти нет, выбирай любой. Плохая: фирма идёт через bei + Dativ — bei einer Firma, bei einer Organisation. Русское «В фирму» тянет на in, и это самая частая ошибка в мотивационных письмах."},
+
+ {de:"eingehen", ru:"откликаться на, вникать в", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = вникнуть В → откликнуться НА",
+  lat:{v:"АЙН-гээн", hint:"ei читается «ай», всегда. Приставка ein- ударная и отделяемая. Два «е» подряд тянутся долго: «ГЭЭ-эн»."},
+  forms:{pra:"geht ein", praL:"ГЭЭТ айн", prat:"ging ein", pratL:"ГИНГ айн", perf:"ist eingegangen", perfL:"ист АЙН-гэ-ган-гэн"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Unser Chef geht selten auf Vorschläge aus dem Team ein.", ru:"Наш шеф редко откликается на предложения от команды."},
+  s2:{perf:"Auf meine Nachfrage ist die Behörde gar nicht eingegangen.",
+      prat:"Auf meine Nachfrage ging die Behörde gar nicht ein.",
+      ru:"На мой запрос ведомство вообще не отреагировало."},
+  s3:{de:"Ich möchte kurz darauf eingehen, warum dieser Punkt für uns wichtig ist.", ru:"Я хотел бы коротко остановиться на том, почему этот пункт для нас важен."},
+  trap:"Прямого русского соответствия нет вообще — поэтому не переводи, а учи блоком целиком. Фраза «Ich möchte kurz darauf eingehen, …» это готовое вступление для Sprechen Teil 2 и 3, вставляй её как есть. Вспомогательный глагол — sein."},
+
+ {de:"sich einigen", ru:"договориться о", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = о результате · über = о спорном вопросе",
+  lat:{v:"зихь АЙ-ни-гэн", hint:"ei = «ай». Внимание: ein- здесь НЕ приставка, глагол неотделяемый — поэтому Partizip geeinigt, а не «eingeeinigt»."},
+  forms:{pra:"einigt sich", praL:"АЙ-нихьт зихь", prat:"einigte sich", pratL:"АЙ-нихь-тэ зихь", perf:"hat sich geeinigt", perfL:"хат зихь гэ-АЙ-нихьт"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Wir einigen uns auf einen Termin nach den Ferien.", ru:"Мы договариваемся о встрече после каникул."},
+  s2:{perf:"Am Ende haben sich beide Seiten auf einen Kompromiss geeinigt.",
+      prat:"Am Ende einigten sich beide Seiten auf einen Kompromiss.",
+      ru:"В итоге обе стороны договорились о компромиссе."},
+  s3:{de:"Wir konnten uns nicht darauf einigen, wer das Protokoll schreibt.", ru:"Мы не смогли договориться о том, кто пишет протокол."},
+  trap:"Здесь оба предлога верны, но означают разное. sich einigen AUF + Akk — сойтись на конкретном результате: auf einen Termin, auf einen Kompromiss. sich einigen ÜBER + Akk — прийти к согласию по спорному вопросу: über den Preis. Русское «договориться О» покрывает оба, поэтому выбирай по смыслу: есть готовый результат — auf, идёт спор о предмете — über. На экзамене в девяти случаях из десяти нужен auf."},
+
+ {de:"sich freuen", ru:"радоваться / предвкушать", rek:"auf + Akk  ↔  über + Akk", kasus:"Akkusativ (оба)",
+  prep:"auf = ещё впереди · über = уже случилось",
+  lat:{v:"зихь ФРОЙ-эн", hint:"eu читается «ой», не «ей» и не «эу». s перед гласной = «з»: sich звучит «зихь». ü в über — губы трубочкой, а язык как для «и»: «ЮУ-ба»."},
+  forms:{pra:"freut sich", praL:"ФРОЙТ зихь", prat:"freute sich", pratL:"ФРОЙ-тэ зихь", perf:"hat sich gefreut", perfL:"хат зихь гэ-ФРОЙТ"},
+  wo:"worauf? / worüber?", da:"darauf / darüber",
+  s1:{de:"Ich freue mich schon auf das lange Wochenende.", ru:"Я уже жду не дождусь длинных выходных."},
+  s2:{perf:"Meine Kollegen haben sich sehr über die gute Nachricht gefreut.",
+      prat:"Meine Kollegen freuten sich sehr über die gute Nachricht.",
+      ru:"Коллеги очень обрадовались хорошей новости."},
+  s3:{de:"Ich freue mich darauf, dass der Kurs nächste Woche wieder anfängt.", ru:"Я жду того, что на следующей неделе снова начнётся курс."},
+  kontrast:{aH:"sich freuen AUF + Akk", aM:"событие впереди — предвкушение", aE:"Ich freue mich auf den Urlaub.",
+            bH:"sich freuen ÜBER + Akk", bM:"событие уже произошло — радость", bE:"Ich freue mich über das Geschenk."},
+  trap:"В русском одно слово «радоваться» покрывает оба случая, поэтому предлог ты выбираешь наугад — пятьдесят на пятьдесят. Немецкий делит по времени. Быстрая проверка: если по-русски просится «жду не дождусь» — это auf. Если просится «обрадовался» — это über."},
+ {de:"hinweisen", ru:"указывать на, обращать внимание на", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = указывать НА",
+  lat:{v:"ХИН-вай-зэн", hint:"w = «в», ei = «ай», s между гласными = «з». Приставка hin- ударная и отделяемая."},
+  forms:{pra:"weist hin", praL:"ВАЙСТ хин", prat:"wies hin", pratL:"ВИИС хин", perf:"hat hingewiesen", perfL:"хат ХИН-гэ-ви-зэн"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Ich weise Sie noch auf die Frist am Monatsende hin.", ru:"Обращаю ваше внимание ещё и на срок в конце месяца."},
+  s2:{perf:"Der Kollege hat mich rechtzeitig auf den Fehler hingewiesen.",
+      prat:"Der Kollege wies mich rechtzeitig auf den Fehler hin.",
+      ru:"Коллега вовремя указал мне на ошибку."},
+  s3:{de:"Ich möchte darauf hinweisen, dass die Frist schon morgen endet.", ru:"Хочу обратить внимание на то, что срок истекает уже завтра."},
+  trap:"Русское «указывать НА» здесь совпадает — редкий подарок, пользуйся. А фразу «Ich möchte darauf hinweisen, dass …» выучи целиком: это готовое вступление и для Sprechen Teil 3, и для Forumsbeitrag, и экзаменатор ставит баллы именно за такие Redemittel."},
+
+ {de:"hoffen", ru:"надеяться на", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = надеяться НА",
+  lat:{v:"ХО-фэн", hint:"Двойное f не удваивается в звуке — оно только укорачивает предыдущую «о». Ударение на первый слог."},
+  forms:{pra:"hofft", praL:"ХОФТ", prat:"hoffte", pratL:"ХОФ-тэ", perf:"hat gehofft", perfL:"хат гэ-ХОФТ"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Wir hoffen auf eine schnelle Antwort vom Förderprogramm.", ru:"Мы надеемся на быстрый ответ от программы финансирования."},
+  s2:{perf:"Wochenlang haben wir auf eine Zusage gehofft.",
+      prat:"Wochenlang hofften wir auf eine Zusage.",
+      ru:"Неделями мы надеялись на согласие."},
+  s3:{de:"Ich hoffe sehr darauf, dass sich die Lage bald verbessert.", ru:"Я очень надеюсь на то, что ситуация скоро улучшится."},
+  trap:"Здесь русский помогает: «надеяться НА» → auf + Akkusativ, совпадение полное. Отличай от warten auf: hoffen про желание и веру, warten про потраченное время. На согласие можно и hoffen, и warten — но это будут два разных предложения."},
+
+ {de:"sich konzentrieren", ru:"сосредоточиться на", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = сосредоточиться НА",
+  lat:{v:"зихь кон-цэн-ТРИИ-рэн", hint:"z = «ц». Все глаголы на -ieren ударны на -IE-, и в Perfekt у них НЕТ приставки ge-: konzentriert, а не «gekonzentriert»."},
+  forms:{pra:"konzentriert sich", praL:"кон-цэн-ТРИИРТ зихь", prat:"konzentrierte sich", pratL:"кон-цэн-ТРИИР-тэ зихь", perf:"hat sich konzentriert", perfL:"хат зихь кон-цэн-ТРИИРТ"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Im Großraumbüro kann ich mich schlecht auf die Arbeit konzentrieren.", ru:"В опенспейсе мне плохо удаётся сосредоточиться на работе."},
+  s2:{perf:"Gestern habe ich mich kaum auf den Text konzentriert.",
+      prat:"Gestern konzentrierte ich mich kaum auf den Text.",
+      ru:"Вчера я едва мог сосредоточиться на тексте."},
+  s3:{de:"Konzentrier dich darauf, was diese Woche wirklich fertig werden muss.", ru:"Сосредоточься на том, что действительно должно быть готово на этой неделе."},
+  trap:"Русское «сосредоточиться НА чём» — предложный падеж, и рука тянется поставить Dativ. Нет: auf + AKKUSATIV. Общее правило по этому гнезду: у auf со всеми этими глаголами всегда Akkusativ, потому что внимание движется к цели, а не покоится на ней."},
+
+ {de:"reagieren", ru:"реагировать на", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = реагировать НА",
+  lat:{v:"рэ-а-ГИИ-рэн", hint:"g читается твёрдо «г», не «ж». Ударение на -IE-, приставки ge- в Perfekt нет."},
+  forms:{pra:"reagiert", praL:"рэ-а-ГИИРТ", prat:"reagierte", pratL:"рэ-а-ГИИР-тэ", perf:"hat reagiert", perfL:"хат рэ-а-ГИИРТ"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Wie reagiert der Kunde auf unseren neuen Vorschlag?", ru:"Как клиент реагирует на наше новое предложение?"},
+  s2:{perf:"Er hat sehr gelassen auf die Kritik reagiert.",
+      prat:"Er reagierte sehr gelassen auf die Kritik.",
+      ru:"Он очень спокойно отреагировал на критику."},
+  s3:{de:"Sie hat nicht darauf reagiert, dass ihr Vorschlag abgelehnt wurde.", ru:"Она никак не отреагировала на то, что её предложение отклонили."},
+  trap:"Русское «реагировать НА» совпадает — калька работает. Держи это как якорь: у reagieren, warten, hoffen, achten и sich verlassen предлог один и тот же — auf. Русский растаскивает их по четырём разным падежам, немецкий видит одно движение."},
+
+ {de:"sich spezialisieren", ru:"специализироваться на", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = специализироваться НА",
+  lat:{v:"зихь шпэ-ци-а-ли-ЗИИ-рэн", hint:"sp- в начале слова = «шп», не «сп». z = «ц», s между гласными = «з». Ударение на -IE-, ge- в Perfekt нет."},
+  forms:{pra:"spezialisiert sich", praL:"шпэ-ци-а-ли-ЗИИРТ зихь", prat:"spezialisierte sich", pratL:"шпэ-ци-а-ли-ЗИИР-тэ зихь", perf:"hat sich spezialisiert", perfL:"хат зихь шпэ-ци-а-ли-ЗИИРТ"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Unsere Organisation spezialisiert sich auf internationale Projekte.", ru:"Наша организация специализируется на международных проектах."},
+  s2:{perf:"Im Studium habe ich mich auf Datenanalyse spezialisiert.",
+      prat:"Im Studium spezialisierte ich mich auf Datenanalyse.",
+      ru:"В учёбе я специализировался на анализе данных."},
+  s3:{de:"Wir haben uns darauf spezialisiert, kleine Vereine bei Anträgen zu beraten.", ru:"Мы специализируемся на том, чтобы консультировать небольшие объединения по заявкам."},
+  trap:"Русское «специализироваться НА чём» — предложный падеж, снова тянет на Dativ. Нет: auf + Akkusativ. И отдельно про звук: sp- и st- в начале слова немец читает «шп» и «шт». Произнесённое «спе-циа-ли-зирен» — самая заметная примета славянского акцента, слышно с первого слога."},
+
+ {de:"sich verlassen", ru:"полагаться на", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = полагаться НА",
+  lat:{v:"зихь фэа-ЛА-сэн", hint:"ver- звучит «фэа»: «р» не рычит, а тает в «а». ss — глухое «с». Ударение на -LA-."},
+  forms:{pra:"verlässt sich", praL:"фэа-ЛЭСТ зихь", prat:"verließ sich", pratL:"фэа-ЛИИС зихь", perf:"hat sich verlassen", perfL:"хат зихь фэа-ЛА-сэн"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Auf meine Nachbarn kann ich mich hundertprozentig verlassen.", ru:"На своих соседей я могу положиться на все сто."},
+  s2:{perf:"Ich habe mich auf seine Zusage verlassen — leider zu Unrecht.",
+      prat:"Ich verließ mich auf seine Zusage — leider zu Unrecht.",
+      ru:"Я положился на его обещание — к сожалению, зря."},
+  s3:{de:"Sie können sich darauf verlassen, dass die Unterlagen morgen da sind.", ru:"Вы можете положиться на то, что документы будут завтра."},
+  trap:"Предлог совпадает с русским «положиться НА» — удача. Но будь начеку: без sich это совсем другой глагол. Ich verlasse das Büro значит «я покидаю офис». Одно маленькое sich разводит «полагаться» и «покидать»."},
+
+ {de:"verzichten", ru:"отказываться от", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = отказаться ОТ (не von!)",
+  lat:{v:"фэа-ЦИХЬ-тэн", hint:"z = всегда «ц», никогда «з». -ich- = мягкое «хь», как в «хихикать», не «х» и не «ш». Приставка ver- = «фэа». Так же ведут себя безударные be-, ge-, er-, zer-, ent-. А вот her- ударная и звучит полным «хеер»."},
+  forms:{pra:"verzichtet", praL:"фэа-ЦИХЬ-тэт", prat:"verzichtete", pratL:"фэа-ЦИХЬ-тэ-тэ", perf:"hat verzichtet", perfL:"хат фэа-ЦИХЬ-тэт"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Wegen der hohen Kosten verzichten wir auf die neue Software.", ru:"Из-за высоких расходов мы отказываемся от новой программы."},
+  s2:{perf:"Ich habe heute auf die Mittagspause verzichtet, um früher zu gehen.",
+      prat:"Ich verzichtete heute auf die Mittagspause, um früher zu gehen.",
+      ru:"Сегодня я отказался от обеденного перерыва, чтобы уйти раньше."},
+  s3:{de:"Wir haben darauf verzichtet, zusätzliches Personal einzustellen.", ru:"Мы отказались от того, чтобы нанимать дополнительный персонал."},
+  trap:"Главная ловушка всего списка, и коварна она вдвойне: русское «отказаться ОТ» и украинское «відмовитися ВІД» тянут в одну и ту же сторону — на von. Оба родных языка здесь неправы, и опереться не на что. Правило не поможет, поможет только звук: скажи вслух verzichten von der Pause, потом verzichten auf die Pause — и так три раза, пока первое не начнёт резать слух."},
+
+ {de:"sich vorbereiten", ru:"готовиться к", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = готовиться К (не zu!)",
+  lat:{v:"зихь ФОР-бэ-рай-тэн", hint:"v = «ф», ei = «ай». Приставка vor- ударная и отделяемая: в предложении улетает в конец."},
+  forms:{pra:"bereitet sich vor", praL:"бэ-РАЙ-тэт зихь фор", prat:"bereitete sich vor", pratL:"бэ-РАЙ-тэ-тэ зихь фор", perf:"hat sich vorbereitet", perfL:"хат зихь ФОР-бэ-рай-тэт"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Ich bereite mich gerade auf die B2-Prüfung im Januar vor.", ru:"Я как раз готовлюсь к экзамену B2 в январе."},
+  s2:{perf:"Auf das Vorstellungsgespräch habe ich mich gründlich vorbereitet.",
+      prat:"Auf das Vorstellungsgespräch bereitete ich mich gründlich vor.",
+      ru:"К собеседованию я подготовился основательно."},
+  s3:{de:"Ich habe mich nicht darauf vorbereitet, dass die Fragen so offen gestellt werden.", ru:"Я не был готов к тому, что вопросы будут заданы так открыто."},
+  trap:"Русское «готовиться К» тянет на zu, и это выглядит совершенно логично. Нет: auf + Akkusativ. Логика у немецкого своя — подготовка нацелена на событие впереди, а auf и есть направление к цели. Первое предложение, кстати, скажи вслух прямо сейчас: оно про тебя."},
+
+ {de:"warten", ru:"ждать", rek:"auf + Akk", kasus:"Akkusativ",
+  prep:"auf = ждать КОГО / ЧЕГО",
+  lat:{v:"ВАР-тэн", hint:"w читается как «в», никогда как «у». Окончание -en почти проглатывается: «ВАР-тн»."},
+  forms:{pra:"wartet", praL:"ВАР-тэт", prat:"wartete", pratL:"ВАР-тэ-тэ", perf:"hat gewartet", perfL:"хат гэ-ВАР-тэт"},
+  wo:"worauf?", da:"darauf",
+  s1:{de:"Ich warte seit zwei Wochen auf eine Antwort vom Amt.", ru:"Я уже две недели жду ответа из ведомства."},
+  s2:{perf:"Wir haben gestern eine Stunde auf den Techniker gewartet.",
+      prat:"Wir warteten gestern eine Stunde auf den Techniker.",
+      ru:"Вчера мы час прождали техника."},
+  s3:{de:"Ich warte noch darauf, dass die Firma sich endlich meldet.", ru:"Я всё ещё жду, когда фирма наконец даст о себе знать."},
+  trap:"Русский говорит «ждать ответА» — родительный падеж без предлога, поэтому рука тянется написать warten eine Antwort. Нет: всегда auf + Akkusativ. А вот украинское «чекати НА відповідь» здесь твой союзник: предлог совпадает один в один. Когда сомневаешься — проговори фразу по-украински."}
+ ]
+},
+{
+ id:"ueber", prep:"über + Akkusativ", idea:"ТЕМА, ВОКРУГ КОТОРОЙ КРУЖИТ РЕЧЬ И ЧУВСТВО", hue:"#7c3f9e",
+ logic:"über буквально значит «над, поверх». Речь, мысль или эмоция как будто кружат над темой и охватывают её целиком. Отсюда снова Akkusativ: это движение вокруг, а не покой. Практическое следствие: почти всё, что по-русски «о чём-то» в разговоре и «на кого-то» в эмоции, здесь идёт через über.",
+ verbs:[
+
+ {de:"sich ärgern", ru:"злиться на, раздражаться из-за", rek:"über + Akk", kasus:"Akkusativ",
+  prep:"über = злиться НА / ИЗ-ЗА",
+  lat:{v:"зихь ЭР-гэан", hint:"ä = «э». g твёрдое. Окончание -ern звучит «эан»: «р» не рычит, а тает."},
+  forms:{pra:"ärgert sich", praL:"ЭР-гэат зихь", prat:"ärgerte sich", pratL:"ЭР-гэа-тэ зихь", perf:"hat sich geärgert", perfL:"хат зихь гэ-ЭР-гэат"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Ich ärgere mich jeden Morgen über die verspätete Straßenbahn.", ru:"Каждое утро я злюсь на опаздывающий трамвай."},
+  s2:{perf:"Gestern habe ich mich sehr über den Ton in der Mail geärgert.",
+      prat:"Gestern ärgerte ich mich sehr über den Ton in der Mail.",
+      ru:"Вчера я сильно разозлился на тон в письме."},
+  s3:{de:"Sie ärgert sich darüber, dass niemand pünktlich zum Meeting kommt.", ru:"Она злится из-за того, что никто не приходит на встречу вовремя."},
+  trap:"Русское «злиться НА кого-то» тянет на auf — очень настойчиво. Нет: über + Akkusativ. Разведи по смыслу всё гнездо: auf это цель впереди, über это тема, которая тебя накрыла. Злость всегда про уже случившееся, поэтому über."},
+
+ {de:"sich beklagen", ru:"сетовать на, роптать", rek:"über + Akk", kasus:"Akkusativ",
+  prep:"über = сетовать НА",
+  lat:{v:"зихь бэ-КЛАА-гэн", hint:"Приставка be- безударная, ударение на -kla-, и «а» там долгое."},
+  forms:{pra:"beklagt sich", praL:"бэ-КЛААКТ зихь", prat:"beklagte sich", pratL:"бэ-КЛААК-тэ зихь", perf:"hat sich beklagt", perfL:"хат зихь бэ-КЛААКТ"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Viele Kollegen beklagen sich über die vielen Überstunden.", ru:"Многие коллеги сетуют на большое количество сверхурочных."},
+  s2:{perf:"Ein Kunde hat sich über unseren Service beklagt.",
+      prat:"Ein Kunde beklagte sich über unseren Service.",
+      ru:"Один клиент пожаловался на наш сервис."},
+  s3:{de:"Er beklagt sich ständig darüber, dass er zu viel arbeiten muss.", ru:"Он постоянно сетует на то, что вынужден слишком много работать."},
+  kontrast:{aH:"sich beklagen über + Akk", aM:"ворчать вслух, часто без адресата", aE:"Er beklagt sich über das Wetter.",
+            bH:"sich beschweren bei + Dat / über + Akk", bM:"подать официальную жалобу — есть кому", bE:"Er beschwert sich beim Chef über den Lärm."},
+  trap:"Не путай с sich beschweren, они близкие, но не равные. beklagen — это ворчать вслух, часто вообще ни к кому не обращаясь. beschweren — подать жалобу конкретному лицу, поэтому у него есть второй предлог bei + Dativ. По-русски и то и другое «жаловаться»."},
+
+ {de:"berichten", ru:"сообщать о, докладывать о", rek:"über + Akk", kasus:"Akkusativ",
+  prep:"über = о (подробно) · von = о (вскользь)",
+  lat:{v:"бэ-РИХЬ-тэн", hint:"Приставка be- безударная. ch после i всегда мягкое: «РИХЬ», не «РИХ»."},
+  forms:{pra:"berichtet", praL:"бэ-РИХЬ-тэт", prat:"berichtete", pratL:"бэ-РИХЬ-тэ-тэ", perf:"hat berichtet", perfL:"хат бэ-РИХЬ-тэт"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Ich berichte Ihnen kurz über den Stand des Projekts.", ru:"Я коротко доложу вам о состоянии проекта."},
+  s2:{perf:"Die Sächsische Zeitung hat ausführlich über das Festival berichtet.",
+      prat:"Die Sächsische Zeitung berichtete ausführlich über das Festival.",
+      ru:"«Зексише Цайтунг» подробно рассказала о фестивале."},
+  s3:{de:"Er berichtete darüber, wie sich die Lage in den letzten Monaten entwickelt hat.", ru:"Он рассказал о том, как развивалась ситуация в последние месяцы."},
+  kontrast:{aH:"berichten über + Akk", aM:"подробно, с фактами — отчёт, статья", aE:"Die Zeitung berichtet über den Vorfall.",
+            bH:"berichten von + Dat", bM:"вскользь, мимоходом — в разговоре", bE:"Sie berichtet von ihrer Reise."},
+  trap:"Оба предлога переводятся русским «о» — здесь родной язык не помогает вообще, выбирать приходится по смыслу. über + Akkusativ значит подробно и по делу, von + Dativ значит мимоходом. В письменном отчёте на экзамене всегда бери über."},
+
+ {de:"sich beschweren", ru:"жаловаться кому на что", rek:"bei + Dat / über + Akk", kasus:"Dativ + Akkusativ",
+  prep:"кому — bei + Dat · на что — über + Akk",
+  lat:{v:"зихь бэ-ШВЭЭ-рэн", hint:"sch = «ш», w = «в». Приставка be- безударная, ударение на -schwe-, «э» там долгое."},
+  forms:{pra:"beschwert sich", praL:"бэ-ШВЭЭРТ зихь", prat:"beschwerte sich", pratL:"бэ-ШВЭЭР-тэ зихь", perf:"hat sich beschwert", perfL:"хат зихь бэ-ШВЭЭРТ"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Der Nachbar beschwert sich beim Vermieter über den Lärm.", ru:"Сосед жалуется арендодателю на шум."},
+  s2:{perf:"Mehrere Teilnehmer haben sich über den kurzfristigen Termin beschwert.",
+      prat:"Mehrere Teilnehmer beschwerten sich über den kurzfristigen Termin.",
+      ru:"Несколько участников пожаловались на срок, назначенный в последний момент."},
+  s3:{de:"Ich möchte mich darüber beschweren, dass die Pausen nicht eingehalten werden.", ru:"Я хотел бы пожаловаться на то, что перерывы не соблюдаются."},
+  trap:"Русское «пожаловаться КОМУ» — дательный падеж, и рука ставит голый Dativ: dem Vermieter. Нет: bei + Dativ. Два предлога в одном предложении — нормально, и порядок свободный: beim Vermieter über den Lärm или über den Lärm beim Vermieter, оба верны."},
+
+ {de:"diskutieren", ru:"обсуждать, дискутировать о", rek:"über + Akk", kasus:"Akkusativ",
+  prep:"о чём — über + Akk · с кем — mit + Dat",
+  lat:{v:"дис-ку-ТИИ-рэн", hint:"Ударение на -IE-. В Perfekt приставки ge- нет: diskutiert, а не «gediskutiert»."},
+  forms:{pra:"diskutiert", praL:"дис-ку-ТИИРТ", prat:"diskutierte", pratL:"дис-ку-ТИИР-тэ", perf:"hat diskutiert", perfL:"хат дис-ку-ТИИРТ"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Morgen diskutieren wir im Team über den neuen Zeitplan.", ru:"Завтра мы в команде обсудим новый график."},
+  s2:{perf:"Wir haben lange über das Budget diskutiert.",
+      prat:"Wir diskutierten lange über das Budget.",
+      ru:"Мы долго обсуждали бюджет."},
+  s3:{de:"Man diskutiert gerade darüber, ob Homeoffice wirklich produktiver ist.", ru:"Сейчас обсуждают, действительно ли удалёнка продуктивнее."},
+  trap:"Русское «дискутировать О» совпадает, тут всё просто. Но помни про второе управление: с кем — mit + Dativ. В одном предложении живут оба: Ich diskutiere mit den Kollegen über den Plan."},
+
+ {de:"erzählen", ru:"рассказывать о", rek:"über + Akk / von + Dat", kasus:"Akkusativ",
+  prep:"über = отстранённо, по делу · von = теплее, живее",
+  lat:{v:"эа-ЦЭЭ-лэн", hint:"Приставка er- звучит «эа», «р» не рычит. z = «ц». Под ударением долгое «ээ»."},
+  forms:{pra:"erzählt", praL:"эа-ЦЭЭЛТ", prat:"erzählte", pratL:"эа-ЦЭЭЛ-тэ", perf:"hat erzählt", perfL:"хат эа-ЦЭЭЛТ"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Sie erzählt gern über ihre Arbeit in der Organisation.", ru:"Она охотно рассказывает о своей работе в организации."},
+  s2:{perf:"Beim Kaffee hat er viel über seine erste Zeit in Dresden erzählt.",
+      prat:"Beim Kaffee erzählte er viel über seine erste Zeit in Dresden.",
+      ru:"За кофе он много рассказывал о своём первом времени в Дрездене."},
+  s3:{de:"Er hat darüber erzählt, wie schwierig der Anfang hier war.", ru:"Он рассказал о том, как трудно было здесь вначале."},
+  trap:"Оба варианта верны, но звучат по-разному: von + Dativ чаще в живой речи и теплее, über + Akkusativ отстранённее и по делу. Русское «о» покрывает оба, поэтому выбирай по тону, а не по переводу. В разговоре с соседом — von, в отчёте — über."},
+
+ {de:"(sich) informieren", ru:"узнавать о / сообщать кому-то о", rek:"über + Akk", kasus:"Akkusativ",
+  prep:"über = о (в обоих режимах)",
+  lat:{v:"ин-фор-МИИ-рэн", hint:"Ударение на -IE-, приставки ge- в Perfekt нет: informiert."},
+  forms:{pra:"informiert (sich)", praL:"ин-фор-МИИРТ", prat:"informierte (sich)", pratL:"ин-фор-МИИР-тэ", perf:"hat (sich) informiert", perfL:"хат ин-фор-МИИРТ"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Vor der Bewerbung informiere ich mich immer über die Organisation.", ru:"Перед подачей заявки я всегда навожу справки об организации."},
+  s2:{perf:"Wir haben die Partner rechtzeitig über die Änderung informiert.",
+      prat:"Wir informierten die Partner rechtzeitig über die Änderung.",
+      ru:"Мы вовремя проинформировали партнёров об изменении."},
+  s3:{de:"Bitte informieren Sie sich darüber, welche Unterlagen nötig sind.", ru:"Пожалуйста, узнайте о том, какие документы нужны."},
+  kontrast:{aH:"sich informieren über + Akk", aM:"узнавать самому, наводить справки", aE:"Ich informiere mich über die Firma.",
+            bH:"jemanden informieren über + Akk", bM:"сообщать другому, ставить в известность", bE:"Ich informiere Sie über den Termin."},
+  trap:"Один глагол в двух режимах, и различает их только sich. С sich — узнавать самому. Без sich — сообщать другому. Предлог в обоих случаях über + Akkusativ. Русское «информировать О» совпадает, так что здесь достаточно следить за одним sich."},
+
+ {de:"lachen", ru:"смеяться над", rek:"über + Akk", kasus:"Akkusativ",
+  prep:"über = смеяться НАД",
+  lat:{v:"ЛА-хэн", hint:"ch после a — твёрдое «х», как в «ахнуть». Ударение на первый слог."},
+  forms:{pra:"lacht", praL:"ЛАХТ", prat:"lachte", pratL:"ЛАХ-тэ", perf:"hat gelacht", perfL:"хат гэ-ЛАХТ"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Über diesen Spruch lachen bei uns im Büro alle.", ru:"Над этой шуткой у нас в бюро смеются все."},
+  s2:{perf:"Beim Mittagessen haben wir lange über die Geschichte gelacht.",
+      prat:"Beim Mittagessen lachten wir lange über die Geschichte.",
+      ru:"За обедом мы долго смеялись над этой историей."},
+  s3:{de:"Er lacht immer darüber, wie ernst wir das nehmen.", ru:"Он всегда смеётся над тем, как серьёзно мы к этому относимся."},
+  trap:"Здесь редкий случай: предлог ты угадаешь, а падеж нет. Русское «смеяться НАД» само подсказывает über — и это верно. Но «над кем-то» в русском творительный, поэтому дальше идёт über + Dativ, а нужен Akkusativ. И не путай с auslachen + Akk: это уже «высмеивать кого-то», обидно."},
+
+ {de:"nachdenken", ru:"обдумывать, размышлять о", rek:"über + Akk", kasus:"Akkusativ",
+  prep:"über = размышлять НАД / О",
+  lat:{v:"НАХ-дэн-кэн", hint:"ch после a — твёрдое «х». Приставка nach- ударная и отделяемая, улетает в конец предложения."},
+  forms:{pra:"denkt nach", praL:"ДЭНКТ нах", prat:"dachte nach", pratL:"ДАХ-тэ нах", perf:"hat nachgedacht", perfL:"хат НАХ-гэ-дахт"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Ich denke noch über euren Vorschlag nach.", ru:"Я ещё обдумываю ваше предложение."},
+  s2:{perf:"Ich habe die ganze Nacht über das Angebot nachgedacht.",
+      prat:"Ich dachte die ganze Nacht über das Angebot nach.",
+      ru:"Я всю ночь размышлял над этим предложением."},
+  s3:{de:"Ich denke gerade darüber nach, ob sich der Wechsel wirklich lohnt.", ru:"Я как раз обдумываю, действительно ли смена стоит того."},
+  kontrast:{aH:"denken an + Akk", aM:"держать в голове, помнить, вспоминать", aE:"Ich denke oft an meine Familie.",
+            bH:"nachdenken über + Akk", bM:"взвешивать, обдумывать, анализировать", bE:"Ich denke über den Vorschlag nach."},
+  trap:"Русское «думать О» и «размышлять НАД» — два разных предлога, и оба сбивают. Немецкий делит совсем иначе: denken an значит держать в голове и помнить, nachdenken über значит взвешивать и анализировать. И следи за формами, они неправильные: denkt · dachte · gedacht."},
+
+ {de:"schimpfen", ru:"ругать, ворчать на", rek:"über + Akk", kasus:"Akkusativ",
+  prep:"über = ворчать НА (за глаза) · mit = отчитывать (в лицо)",
+  lat:{v:"ШИМ-пфэн", hint:"sch = «ш». pf — один слитный звук: губы смыкаются и сразу идёт выдох, не «п» и «ф» по отдельности."},
+  forms:{pra:"schimpft", praL:"ШИМПФТ", prat:"schimpfte", pratL:"ШИМПФ-тэ", perf:"hat geschimpft", perfL:"хат гэ-ШИМПФТ"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Mein Nachbar schimpft ständig über die Baustelle vor dem Haus.", ru:"Мой сосед постоянно ворчит на стройку перед домом."},
+  s2:{perf:"Den ganzen Abend hat er über den Verkehr geschimpft.",
+      prat:"Den ganzen Abend schimpfte er über den Verkehr.",
+      ru:"Весь вечер он ругался на транспорт."},
+  s3:{de:"Sie schimpft oft darüber, dass alles so lange dauert.", ru:"Она часто ворчит на то, что всё так долго тянется."},
+  kontrast:{aH:"schimpfen über + Akk", aM:"ворчать на что-то или на кого-то за глаза", aE:"Er schimpft über den Verkehr.",
+            bH:"schimpfen mit + Dat", bM:"отчитывать человека прямо в лицо", bE:"Sie schimpft mit ihrem Sohn."},
+  trap:"Два предлога — две разные ситуации, и русское «ругать» покрывает обе. über + Akkusativ это ворчать за глаза, mit + Dativ это отчитывать человека прямо в лицо. Смотри на ситуацию, а не на перевод: «он ругал сына» и «он ругал погоду» в немецком идут разными предлогами."},
+
+ {de:"sprechen", ru:"говорить о", rek:"über + Akk", kasus:"Akkusativ",
+  prep:"о теме — über + Akk · с человеком — mit + Dat",
+  lat:{v:"ШПРЭ-хьэн", hint:"sp- в начале = «шп», не «сп». И следи за ch: в sprechen после e он мягкий («хь»), а в sprach и gesprochen после a и o — твёрдый («х»). Один глагол, оба варианта."},
+  forms:{pra:"spricht", praL:"ШПРИХЬТ", prat:"sprach", pratL:"ШПРААХ", perf:"hat gesprochen", perfL:"хат гэ-ШПРО-хэн"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Heute sprechen wir im Meeting über die Finanzierung.", ru:"Сегодня на встрече мы поговорим о финансировании."},
+  s2:{perf:"Wir haben schon mehrmals über dieses Problem gesprochen.",
+      prat:"Wir sprachen schon mehrmals über dieses Problem.",
+      ru:"Мы уже несколько раз говорили об этой проблеме."},
+  s3:{de:"Sie haben lange darüber gesprochen, wie man das Problem lösen könnte.", ru:"Они долго говорили о том, как можно было бы решить эту проблему."},
+  kontrast:{aH:"sprechen über + Akk", aM:"о теме — предметно, по делу", aE:"Wir sprechen über das Budget.",
+            bH:"sprechen mit + Dat", bM:"с человеком — кто собеседник", bE:"Ich spreche mit dem Chef."},
+  trap:"У sprechen целых три управления: über + Akk это о теме, mit + Dat это с человеком, von + Dat это о ком-то вскользь. Русское «говорить С» и «говорить О» разводит их так же — здесь родной язык впервые за это гнездо помогает. В одном предложении спокойно живут два: Ich spreche mit dem Chef über den Urlaub."},
+
+ {de:"(sich) streiten", ru:"спорить о, ссориться", rek:"über + Akk", kasus:"Akkusativ",
+  prep:"über = спорить О теме · um = спорить ИЗ-ЗА объекта",
+  lat:{v:"ШТРАЙ-тэн", hint:"st- в начале слова = «шт», не «ст». ei = «ай»."},
+  forms:{pra:"streitet (sich)", praL:"ШТРАЙ-тэт", prat:"stritt (sich)", pratL:"ШТРИТ", perf:"hat (sich) gestritten", perfL:"хат гэ-ШТРИ-тэн"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Im Verein streiten alle über die gleiche alte Frage.", ru:"В объединении все спорят об одном и том же старом вопросе."},
+  s2:{perf:"Gestern haben wir uns über die Reiseplanung gestritten.",
+      prat:"Gestern stritten wir uns über die Reiseplanung.",
+      ru:"Вчера мы поспорили о планировании поездки."},
+  s3:{de:"Wir streiten oft darüber, wer welche Aufgabe übernimmt.", ru:"Мы часто спорим о том, кто какую задачу берёт."},
+  kontrast:{aH:"streiten über + Akk", aM:"спорить о теме — кто прав", aE:"Sie streiten über Politik.",
+            bH:"streiten um + Akk", bM:"спорить из-за объекта — кому достанется", bE:"Sie streiten um den Parkplatz."},
+  trap:"über + Akk это спорить о теме, о том, кто прав. um + Akk это бороться за объект: um das Geld, um den Parkplatz. Русское «спорить о» и «спорить из-за» разводит похоже, так что здесь можно опереться на родной язык. Формы сильные и короткие: streitet · stritt · gestritten."},
+
+ {de:"sich unterhalten", ru:"беседовать о", rek:"über + Akk", kasus:"Akkusativ",
+  prep:"о чём — über + Akk · с кем — mit + Dat",
+  lat:{v:"зихь ун-та-ХАЛ-тэн", hint:"-ter- звучит «та», «р» тает. Приставка unter- здесь НЕотделяемая: ударение на -hal-, и в Perfekt нет ge- — unterhalten, а не «untergehalten»."},
+  forms:{pra:"unterhält sich", praL:"ун-та-ХЭЛТ зихь", prat:"unterhielt sich", pratL:"ун-та-ХИИЛТ зихь", perf:"hat sich unterhalten", perfL:"хат зихь ун-та-ХАЛ-тэн"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Nach dem Kurs unterhalten wir uns oft über Politik.", ru:"После курса мы часто беседуем о политике."},
+  s2:{perf:"Gestern haben wir uns lange über die Lage in der Branche unterhalten.",
+      prat:"Gestern unterhielten wir uns lange über die Lage in der Branche.",
+      ru:"Вчера мы долго беседовали о положении в отрасли."},
+  s3:{de:"Sie unterhalten sich oft darüber, wie sich die Stadt verändert.", ru:"Они часто беседуют о том, как меняется город."},
+  trap:"sich unterhalten это именно приятная беседа — не спор и не деловые переговоры. И sich обязательно: без него unterhalten значит развлекать или содержать. Er unterhält die Gäste — он развлекает гостей. Er unterhält sich mit den Gästen — он с ними беседует."},
+
+ {de:"sich wundern", ru:"удивляться", rek:"über + Akk", kasus:"Akkusativ",
+  prep:"über = удивляться ЧЕМУ → НАД",
+  lat:{v:"зихь ВУН-дэан", hint:"w = «в». Окончание -ern звучит «эан»: «р» тает в «а», как и в -er на конце."},
+  forms:{pra:"wundert sich", praL:"ВУН-дэат зихь", prat:"wunderte sich", pratL:"ВУН-дэа-тэ зихь", perf:"hat sich gewundert", perfL:"хат зихь гэ-ВУН-дэат"},
+  wo:"worüber?", da:"darüber",
+  s1:{de:"Ich wundere mich über die vielen Formulare hier.", ru:"Я удивляюсь количеству формуляров здесь."},
+  s2:{perf:"Ich habe mich sehr über seine Reaktion gewundert.",
+      prat:"Ich wunderte mich sehr über seine Reaktion.",
+      ru:"Я очень удивился его реакции."},
+  s3:{de:"Ich wundere mich darüber, warum niemand etwas gesagt hat.", ru:"Меня удивляет, почему никто ничего не сказал."},
+  trap:"Русское «удивляться ЧЕМУ» — дательный падеж без всякого предлога, поэтому предлог просто не приходит в голову, и получается «ich wundere mich seine Reaktion». Нет: всегда über + Akkusativ. Плюс обязательное sich — без него глагол не работает вовсе."}
+ ]
+}
+];
+
+/* Слова из примеров, которые могут быть незнакомы. Ключ — поле de карточки. */
+var GLOSS = {
+"achten":"der Ton — тон · der Anfang — начало · die Rechtschreibung — орфография · die Unterlagen — документы · vollständig — в полном комплекте",
+"ankommen (es kommt auf … an)":"die Bewerbung — заявка на работу · die Papiere — бумаги, документы · vor allem — прежде всего · rechtzeitig — вовремя",
+"antworten":"heute noch — сегодня же · das Amt — ведомство · wochenlang — неделями · der Antrag — заявление · das Treffen — встреча",
+"aufpassen":"der Nachbar — сосед · der Umzug — переезд · die Kiste — коробка · ins Schloss fallen — захлопнуться (о двери)",
+"sich beziehen":"die Sitzung — заседание · mehrmals — несколько раз · der Vertrag — договор · die Kosten — расходы · übernehmen — брать на себя",
+"sich bewerben":"die Stelle — должность, место работы · das Stipendium — стипендия · interessieren — интересовать",
+"eingehen":"selten — редко · der Vorschlag — предложение · die Nachfrage — запрос · die Behörde — ведомство · gar nicht — вообще не",
+"sich einigen":"der Termin — срок, назначенная встреча · die Ferien — каникулы · beide Seiten — обе стороны · das Protokoll — протокол",
+"sich freuen":"das Wochenende — выходные · die Nachricht — новость, известие · anfangen — начинаться",
+"hinweisen":"die Frist — срок · das Monatsende — конец месяца · rechtzeitig — вовремя · der Fehler — ошибка · enden — заканчиваться",
+"hoffen":"die Antwort — ответ · das Förderprogramm — программа финансирования · die Zusage — согласие, одобрение · die Lage — положение · sich verbessern — улучшаться",
+"sich konzentrieren":"das Großraumbüro — опенспейс · kaum — едва, почти не · fertig werden — быть готовым",
+"reagieren":"der Kunde — клиент · der Vorschlag — предложение · gelassen — спокойно, невозмутимо · ablehnen — отклонять",
+"sich spezialisieren":"das Studium — учёба в вузе · der Verein — объединение, общество · der Antrag — заявка · beraten — консультировать",
+"sich verlassen":"der Nachbar — сосед · die Zusage — обещание · zu Unrecht — напрасно, зря · die Unterlagen — документы",
+"verzichten":"wegen — из-за · die Kosten — расходы · die Mittagspause — обеденный перерыв · zusätzlich — дополнительный · das Personal — персонал · einstellen — нанимать",
+"sich vorbereiten":"gerade — как раз, сейчас · die Prüfung — экзамен · das Vorstellungsgespräch — собеседование · gründlich — основательно · offen — открытый",
+"warten":"seit — с (какого-то момента) · das Amt — ведомство · der Techniker — мастер, техник · sich melden — дать о себе знать · endlich — наконец",
+
+"sich ärgern":"verspätet — опаздывающий · die Straßenbahn — трамвай · der Ton — тон · pünktlich — вовремя",
+"sich beklagen":"die Überstunden — сверхурочные · der Kunde — клиент · ständig — постоянно",
+"berichten":"der Stand — состояние, положение дел · ausführlich — подробно · die Lage — ситуация · sich entwickeln — развиваться",
+"sich beschweren":"der Vermieter — арендодатель · der Lärm — шум · der Teilnehmer — участник · kurzfristig — в последний момент · einhalten — соблюдать",
+"diskutieren":"der Zeitplan — график · das Budget — бюджет · gerade — сейчас, как раз",
+"erzählen":"gern — охотно · schwierig — трудный · der Anfang — начало",
+"(sich) informieren":"die Bewerbung — подача заявки · rechtzeitig — вовремя · die Änderung — изменение · die Unterlagen — документы · nötig — нужный",
+"lachen":"der Spruch — шутка, присказка · das Mittagessen — обед · die Geschichte — история · ernst nehmen — воспринимать всерьёз",
+"nachdenken":"der Vorschlag — предложение · das Angebot — предложение (коммерческое) · der Wechsel — смена, переход · sich lohnen — стоить того",
+"schimpfen":"der Nachbar — сосед · ständig — постоянно · die Baustelle — стройка · der Verkehr — транспорт, движение · dauern — длиться",
+"sprechen":"die Finanzierung — финансирование · mehrmals — несколько раз · lösen — решать",
+"(sich) streiten":"der Verein — объединение · die gleiche — тот же самый · die Reiseplanung — планирование поездки · die Aufgabe — задача · übernehmen — брать на себя",
+"sich unterhalten":"der Kurs — курс · die Lage — положение · die Branche — отрасль · sich verändern — меняться",
+"sich wundern":"das Formular — формуляр, бланк · die Reaktion — реакция · niemand — никто"
+};
+
+/* Слова-переключатели: маленькие слова, которые меняют смысл фразы.
+   Не про тему — про то, ЧТО именно утверждается. */
+var SCHALT = [
+{w:"pro / je", lat:"проо / йее", ru:"за каждый, в расчёте на",
+ tut:"Превращает число в норму. Само число не меняется — меняется, к чему оно относится.",
+ ohne:"Der Kaffee kostet 4 Euro.", ohneRu:"Кофе стоит 4 евро.",
+ mit:"Der Kaffee kostet 4 Euro pro Tag.", mitRu:"Кофе стоит 4 евро в день.",
+ pruef:{de:"Das Mittagessen kostet 4 Euro pro Arbeitstag.", be:"Обед стоит 4 евро в месяц.", ok:false,
+        erkl:"pro Arbeitstag — за каждый рабочий день. При 20 рабочих днях это 80 евро в месяц, а не 4. Ровно эта пропущенная пара слогов стоила тебе нуля за Forumsbeitrag."}},
+
+{w:"jeweils", lat:"ЙЭ-вайльс", ru:"каждый раз по, соответственно",
+ tut:"Показывает, что число повторяется, а не даётся один раз.",
+ ohne:"Wir treffen uns für 2 Stunden.", ohneRu:"Мы встречаемся на 2 часа.",
+ mit:"Wir treffen uns jeweils 2 Stunden.", mitRu:"Мы встречаемся каждый раз по 2 часа.",
+ pruef:{de:"Die Schulung dauert an drei Tagen jeweils vier Stunden.", be:"В сумме обучение занимает двенадцать часов.", ok:true,
+        erkl:"jeweils vier Stunden — по четыре часа в каждый из трёх дней. Три раза по четыре и есть двенадцать. Без jeweils речь шла бы о четырёх часах всего."}},
+
+{w:"mindestens", lat:"МИН-дэс-тэнс", ru:"не менее, минимум",
+ tut:"Ставит нижнюю границу. Всё, что больше, тоже подходит.",
+ ohne:"Man braucht 3 Jahre Erfahrung.", ohneRu:"Нужно 3 года опыта.",
+ mit:"Man braucht mindestens 3 Jahre Erfahrung.", mitRu:"Нужно не менее 3 лет опыта.",
+ pruef:{de:"Bewerber brauchen mindestens zwei Jahre Berufserfahrung.", be:"Кандидат с пятью годами опыта подходит.", ok:true,
+        erkl:"mindestens задаёт нижнюю границу: два года и больше. Пять лет попадает."}},
+
+{w:"höchstens", lat:"ХЁХЬС-тэнс", ru:"не более, максимум",
+ tut:"Ставит верхнюю границу. Противоположность mindestens.",
+ ohne:"Der Text hat 100 Wörter.", ohneRu:"В тексте 100 слов.",
+ mit:"Der Text hat höchstens 100 Wörter.", mitRu:"В тексте не более 100 слов.",
+ pruef:{de:"Die Pause dauert höchstens 30 Minuten.", be:"Перерыв может длиться 45 минут.", ok:false,
+        erkl:"höchstens — верхний потолок. Больше тридцати нельзя. Не путай с mindestens, они зеркальны."}},
+
+{w:"spätestens", lat:"ШПЭЭ-тэс-тэнс", ru:"не позднее, крайний срок",
+ tut:"Задаёт последний допустимый момент. Раньше можно, позже нельзя.",
+ ohne:"Geben Sie das Formular am Freitag ab.", ohneRu:"Сдайте формуляр в пятницу.",
+ mit:"Geben Sie das Formular spätestens am Freitag ab.", mitRu:"Сдайте формуляр не позднее пятницы.",
+ pruef:{de:"Der Antrag muss spätestens am 15. eingehen.", be:"Подать 10-го числа — нормально.", ok:true,
+        erkl:"spätestens am 15. значит «до 15-го включительно». Раньше — всегда можно."}},
+
+{w:"frühestens", lat:"ФРЮЮ-эс-тэнс", ru:"не ранее",
+ tut:"Задаёт первый допустимый момент. Зеркало к spätestens.",
+ ohne:"Der Kurs beginnt im September.", ohneRu:"Курс начинается в сентябре.",
+ mit:"Der Kurs beginnt frühestens im September.", mitRu:"Курс начнётся не раньше сентября.",
+ pruef:{de:"Das Ergebnis kommt frühestens in zwei Wochen.", be:"Результат может прийти уже завтра.", ok:false,
+        erkl:"frühestens — раньше названного срока не будет. Только через две недели или позже."}},
+
+{w:"ab", lat:"ап", ru:"начиная с",
+ tut:"Открывает промежуток вперёд: с этого момента и дальше.",
+ ohne:"Die Regel gilt im Mai.", ohneRu:"Правило действует в мае.",
+ mit:"Die Regel gilt ab Mai.", mitRu:"Правило действует с мая и далее.",
+ pruef:{de:"Der neue Tarif gilt ab dem 1. Januar.", be:"В декабре новый тариф ещё не действует.", ok:true,
+        erkl:"ab открывает промежуток вперёд от названной точки. Всё, что до неё, не входит."}},
+
+{w:"bis", lat:"бис", ru:"до, включительно",
+ tut:"Закрывает промежуток. Зеркало к ab.",
+ ohne:"Wir arbeiten am Freitag.", ohneRu:"Мы работаем в пятницу.",
+ mit:"Wir arbeiten bis Freitag.", mitRu:"Мы работаем до пятницы.",
+ pruef:{de:"Die Anmeldung läuft bis zum 20. März.", be:"21 марта записаться ещё можно.", ok:false,
+        erkl:"bis закрывает промежуток на названной дате. После неё — уже нет."}},
+
+{w:"außer", lat:"АУ-са", ru:"кроме, за исключением",
+ tut:"Вырезает исключение из общего правила. Легко проскочить и понять фразу наоборот.",
+ ohne:"Das Büro ist täglich geöffnet.", ohneRu:"Офис открыт ежедневно.",
+ mit:"Das Büro ist täglich außer sonntags geöffnet.", mitRu:"Офис открыт ежедневно, кроме воскресенья.",
+ pruef:{de:"Alle Mitarbeiter außer den Auszubildenden nehmen teil.", be:"Ученики в этом не участвуют.", ok:true,
+        erkl:"außer вырезает названную группу из общего правила. Участвуют все, кроме учеников."}},
+
+{w:"insgesamt", lat:"инс-гэ-ЗАМТ", ru:"в общей сложности, всего",
+ tut:"Показывает сумму, а не разовую величину. Прямая противоположность pro и jeweils.",
+ ohne:"Die Fortbildung dauert 20 Stunden.", ohneRu:"Обучение длится 20 часов.",
+ mit:"Die Fortbildung dauert insgesamt 20 Stunden.", mitRu:"Обучение длится 20 часов в общей сложности.",
+ pruef:{de:"Das Projekt kostet insgesamt 5000 Euro.", be:"5000 евро — это стоимость всего проекта целиком.", ok:true,
+        erkl:"insgesamt и означает итог за всё. Если бы речь шла о каждом этапе, стояло бы pro Phase или jeweils."}},
+
+{w:"zusätzlich", lat:"цу-ЗЭЦ-лихь", ru:"дополнительно, сверх того",
+ tut:"Добавляет к тому, что уже есть. Не заменяет — прибавляет.",
+ ohne:"Sie bekommen 100 Euro.", ohneRu:"Вы получите 100 евро.",
+ mit:"Sie bekommen zusätzlich 100 Euro.", mitRu:"Вы получите ещё 100 евро сверх того.",
+ pruef:{de:"Mitarbeiter erhalten zusätzlich zwei Urlaubstage.", be:"У сотрудников будет всего два дня отпуска.", ok:false,
+        erkl:"zusätzlich значит «плюс к имеющемуся». Два дня добавляются к обычному отпуску, а не заменяют его."}},
+
+{w:"statt", lat:"штат", ru:"вместо",
+ tut:"Заменяет одно другим. Противоположность zusätzlich: не плюс, а вместо.",
+ ohne:"Wir machen eine Videokonferenz.", ohneRu:"Мы проведём видеоконференцию.",
+ mit:"Wir machen eine Videokonferenz statt eines Treffens.", mitRu:"Мы проведём видеоконференцию вместо встречи.",
+ pruef:{de:"Statt der Schulung gibt es ein Online-Seminar.", be:"Будут и обучение, и онлайн-семинар.", ok:false,
+        erkl:"statt — замена. Обучения не будет, вместо него семинар. Если бы было и то и другое, стояло бы zusätzlich."}},
+
+{w:"kaum", lat:"каум", ru:"почти не, едва",
+ tut:"СКРЫТОЕ ОТРИЦАНИЕ. Выглядит нейтрально, а означает «почти нет». Пропустил — понял фразу наоборот.",
+ ohne:"Die Kollegen nutzen das Programm.", ohneRu:"Коллеги пользуются программой.",
+ mit:"Die Kollegen nutzen das Programm kaum.", mitRu:"Коллеги почти не пользуются программой.",
+ pruef:{de:"Kaum jemand hat sich für den Kurs angemeldet.", be:"На курс записалось много людей.", ok:false,
+        erkl:"kaum jemand — почти никто. Это отрицание без слова nicht, и именно поэтому его проскакивают."}},
+
+{w:"selten", lat:"ЗЭЛЬ-тэн", ru:"редко",
+ tut:"Тоже почти отрицание. Не «иногда», а «почти никогда».",
+ ohne:"Der Chef geht auf Vorschläge ein.", ohneRu:"Шеф откликается на предложения.",
+ mit:"Der Chef geht selten auf Vorschläge ein.", mitRu:"Шеф редко откликается на предложения.",
+ pruef:{de:"Überstunden kommen bei uns selten vor.", be:"Сверхурочные у нас бывают нечасто.", ok:true,
+        erkl:"selten сдвигает высказывание почти к отрицанию. «Обычное дело» было бы häufig или regelmäßig."}},
+
+{w:"ausschließlich", lat:"аус-ШЛИИС-лихь", ru:"исключительно, только",
+ tut:"Отсекает всё остальное. Сильнее, чем nur, и звучит официальнее.",
+ ohne:"Die Stelle ist für Fachkräfte.", ohneRu:"Должность для специалистов.",
+ mit:"Die Stelle ist ausschließlich für Fachkräfte.", mitRu:"Должность только для специалистов, и ни для кого больше.",
+ pruef:{de:"Der Raum wird ausschließlich für Besprechungen genutzt.", be:"В этом помещении можно и обедать.", ok:false,
+        erkl:"ausschließlich закрывает все прочие варианты. Только совещания, ничего другого."}},
+
+{w:"überwiegend", lat:"юю-ба-ВИИ-гэнт", ru:"преимущественно, в основном",
+ tut:"Большинство, но не все. Легко принять за «все» и ошибиться.",
+ ohne:"Die Teilnehmer kommen aus Sachsen.", ohneRu:"Участники из Саксонии.",
+ mit:"Die Teilnehmer kommen überwiegend aus Sachsen.", mitRu:"Участники в основном из Саксонии.",
+ pruef:{de:"Die Mitarbeiter arbeiten überwiegend im Homeoffice.", be:"Часть сотрудников всё же работает в офисе.", ok:true,
+        erkl:"überwiegend — большинство, но не все. Значит, кто-то остаётся в офисе. Для «все» нужно alle или ausschließlich."}},
+
+{w:"erst", lat:"эаст", ru:"только (о времени), не раньше чем",
+ tut:"Не путать с nur. erst — про время: позже, чем ожидалось. nur — про количество.",
+ ohne:"Der Bus kommt um 18 Uhr.", ohneRu:"Автобус придёт в 18 часов.",
+ mit:"Der Bus kommt erst um 18 Uhr.", mitRu:"Автобус придёт только в 18 часов, не раньше.",
+ pruef:{de:"Die Antwort kommt erst nächste Woche.", be:"Ответ может прийти уже в эти выходные.", ok:false,
+        erkl:"erst nächste Woche — раньше следующей недели ничего не будет. Классическая путаница: erst про время, nur про количество."}},
+
+{w:"weder … noch", lat:"ВЭЭ-да … нох", ru:"ни … ни",
+ tut:"Отрицает сразу оба варианта. Само слово nicht при этом не появляется.",
+ ohne:"Er spricht Englisch und Französisch.", ohneRu:"Он говорит по-английски и по-французски.",
+ mit:"Er spricht weder Englisch noch Französisch.", mitRu:"Он не говорит ни по-английски, ни по-французски.",
+ pruef:{de:"Wir haben weder Zeit noch Geld für das Projekt.", be:"На проект нет ни времени, ни денег.", ok:true,
+        erkl:"weder … noch отрицает обе части сразу, причём без слова nicht. Нет ни того, ни другого."}}
+];
+
+
+/* ---------- state ---------- */
+var ALL=[];NESTS.forEach(function(n){n.verbs.forEach(function(v,i){
+  ALL.push(Object.assign({},v,{nid:n.id,npre:n.prep,hue:n.hue,key:n.id+i}))})});
+var sel=new Set(NESTS.map(function(n){return n.id}));
+var box={};
+try{var st=localStorage.getItem('karteipro2');if(st)box=JSON.parse(st)}catch(e){}
+function save(){try{localStorage.setItem('karteipro2',JSON.stringify(box))}catch(e){}}
+function pool(){return ALL.filter(function(v){return sel.has(v.nid)})}
+function e(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+document.getElementById('hdr').textContent=ALL.length+' карточек · '+NESTS.length+
+ ' гнезда предлогов · 3 формы глагола с транскрипцией · Perfekt и Präteritum · wo-/da-формы';
+
+/* ---------- chips ---------- */
+var chips=document.getElementById('chips');chips.innerHTML='';
+NESTS.forEach(function(n){var c=document.createElement('div');c.className='chip on';c.textContent=n.prep;
+ c.style.background=n.hue;c.style.borderColor=n.hue;c.onclick=function(){
+   if(sel.has(n.id)&&sel.size>1){sel.delete(n.id);c.classList.remove('on');c.style.background='';c.style.borderColor=''}
+   else{sel.add(n.id);c.classList.add('on');c.style.background=n.hue;c.style.borderColor=n.hue}
+   render();nextDrill()};chips.appendChild(c)});
+var cAll=document.createElement('div');cAll.className='chip';cAll.textContent='все';
+cAll.onclick=function(){sel=new Set(NESTS.map(function(n){return n.id}));
+ Array.prototype.slice.call(chips.children).forEach(function(c,i){if(i<NESTS.length){
+   c.classList.add('on');c.style.background=NESTS[i].hue;c.style.borderColor=NESTS[i].hue}});
+ render();nextDrill()};chips.appendChild(cAll);
+
+/* ---------- tabs ---------- */
+var mode='kartei';
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){
+  document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});t.classList.add('on');
+  mode=t.dataset.m;['kartei','drill','audio'].forEach(function(m){
+    document.getElementById(m).style.display=m===mode?'':'none'});
+  stopAudio();if(mode==='drill')nextDrill();if(mode==='audio')initVoices()}});
+
+/* ---------- Kartei ---------- */
+function cardHtml(v,hue){
+ return '<div class="k" style="border-left-color:'+hue+'">'+
+  '<button class="speak" data-k="'+v.key+'">🔊 вслух</button>'+
+  '<h3>'+e(v.de)+'</h3><span class="krek">'+e(v.rek)+'</span>'+
+  '<div class="kru">'+e(v.ru)+'</div>'+
+  '<div class="lat">['+e(v.lat.v)+']</div>'+
+  '<div class="lathint">'+e(v.lat.hint)+'</div>'+
+  '<div class="kmeta"><span class="tag">Fall: <b>'+e(v.kasus)+'</b></span>'+
+   '<span class="tag">'+e(v.prep)+'</span>'+
+   '<span class="tag">Frage: <b>'+e(v.wo)+'</b></span>'+
+   '<span class="tag">da-Form: <b>'+e(v.da)+'</b></span></div>'+
+  '<div class="forms"><i>PRÄSENS · PRÄTERITUM · PERFEKT</i>'+
+   '<div class="fline"><span class="fw">'+e(v.forms.pra)+'</span><span class="fl">'+e(v.forms.praL)+'</span></div>'+
+   '<div class="fline"><span class="fw">'+e(v.forms.prat)+'</span><span class="fl">'+e(v.forms.pratL)+'</span></div>'+
+   '<div class="fline"><span class="fw">'+e(v.forms.perf)+'</span><span class="fl">'+e(v.forms.perfL)+'</span></div></div>'+
+  '<div class="s"><div class="st">Einfach (Nomen-Objekt)</div>'+
+   '<div class="sde">'+e(v.s1.de)+'</div><div class="sru">'+e(v.s1.ru)+'</div></div>'+
+  '<div class="s"><div class="st">Vergangenheit — обе формы</div>'+
+   '<div class="sru" style="margin-bottom:5px">'+e(v.s2.ru)+'</div>'+
+   '<div class="two"><div class="lab">PERFEKT <span>— так говоришь на Sprechen</span></div>'+
+    '<div class="txt">'+e(v.s2.perf)+'</div>'+
+    '<div class="row2"><div class="lab">PRÄTERITUM <span>— так пишешь в Forumsbeitrag</span></div>'+
+    '<div class="txt">'+e(v.s2.prat)+'</div></div></div></div>'+
+  '<div class="s"><div class="st">B2/C1 — mit Nebensatz</div>'+
+   '<div class="sde">'+e(v.s3.de)+'</div><div class="sru">'+e(v.s3.ru)+'</div></div>'+
+  (v.kontrast?'<div class="kontrast"><div class="kt">Контрастная пара</div><div class="kcol">'+
+   '<div><div class="h">'+e(v.kontrast.aH)+'</div><div class="m">'+e(v.kontrast.aM)+'</div><div class="e">'+e(v.kontrast.aE)+'</div></div>'+
+   '<div><div class="h">'+e(v.kontrast.bH)+'</div><div class="m">'+e(v.kontrast.bM)+'</div><div class="e">'+e(v.kontrast.bE)+'</div></div>'+
+   '</div></div>':'')+
+  (GLOSS[v.de]?'<div class="gloss"><b>Слова в предложениях</b>'+e(GLOSS[v.de])+'</div>':'')+
+  '<div class="trap"><b>Где русский предаёт</b><br>'+e(v.trap)+'</div></div>'}
+
+function render(){
+  var q=(document.getElementById('q').value||'').trim().toLowerCase();
+  var el=document.getElementById('list');el.innerHTML='';var shown=0;
+  NESTS.filter(function(n){return sel.has(n.id)}).forEach(function(n){
+    var vs=n.verbs.map(function(v,i){return Object.assign({},v,{key:n.id+i})}).filter(function(v){
+      if(!q)return true;
+      return (v.de+' '+v.ru+' '+v.rek+' '+v.lat.v+' '+v.s1.de+' '+v.s1.ru).toLowerCase().indexOf(q)>-1});
+    if(!vs.length)return;
+    shown+=vs.length;
+    var h=document.createElement('div');h.className='nest';h.style.borderLeftColor=n.hue;
+    h.innerHTML='<div class="nhead"><span class="npre" style="color:'+n.hue+'">'+n.prep+'</span>'+
+      '<span class="nidea">'+n.idea+'</span></div><div class="nlogic">'+e(n.logic)+'</div>';
+    el.appendChild(h);
+    vs.forEach(function(v){var d=document.createElement('div');d.innerHTML=cardHtml(v,n.hue);
+      el.appendChild(d.firstChild)})});
+  document.getElementById('cnt').textContent=shown+' из '+ALL.length+' карточек';
+  if(!shown)el.innerHTML='<div class="card" style="text-align:center;color:var(--tx2)">Ничего не найдено.</div>';
+  el.querySelectorAll('.speak').forEach(function(b){b.onclick=function(){
+    readCard(ALL.filter(function(x){return x.key===b.dataset.k})[0])}})}
+document.getElementById('q').oninput=render;
+render();
+
+/* ---------- Drill ---------- */
+var cur=null,shown=false,done=0,curLvl='s1';
+function pick(){var p=pool();if(!p.length)return null;
+  var w=p.map(function(v){return {v:v,w:Math.pow(2,3-(box[v.key]||0))}});
+  var tot=w.reduce(function(a,b){return a+b.w},0),r=Math.random()*tot;
+  for(var i=0;i<w.length;i++){r-=w[i].w;if(r<=0)return w[i].v}return p[0]}
+function nextDrill(){cur=pick();shown=false;
+  var m=document.getElementById('dmode').value;
+  curLvl=m==='mix'?['s1','perf','prat','s3'][Math.floor(Math.random()*4)]:m;renderDrill()}
+document.getElementById('dmode').onchange=nextDrill;
+function renderDrill(){
+  var b=document.getElementById('dbody'),n=document.getElementById('dbtns');
+  if(!cur){b.innerHTML='<div class="prompt">Выбери хотя бы одно гнездо.</div>';n.innerHTML='';return}
+  var p=pool(),strong=p.filter(function(v){return (box[v.key]||0)>=3}).length;
+  document.getElementById('pbar').style.width=(strong/p.length*100)+'%';
+  document.getElementById('pcount').textContent='Освоено '+strong+' из '+p.length;
+  document.getElementById('pdone').textContent='За сессию: '+done;
+  var q,a,extra='',hint='скажи это по-немецки — вслух';
+  if(curLvl==='rek'){q=cur.de+' — какое управление?';a=cur.rek+'  ·  '+cur.kasus;
+    extra='<div class="sru">'+e(cur.wo)+' / '+e(cur.da)+'</div>';hint='ответь вслух'}
+  else if(curLvl==='forms'){q=cur.de+' — три формы?';a=cur.forms.pra+' · '+cur.forms.prat+' · '+cur.forms.perf;
+    extra='<div class="sru">'+e(cur.forms.praL)+' · '+e(cur.forms.pratL)+' · '+e(cur.forms.perfL)+'</div>';hint='ответь вслух'}
+  else if(curLvl==='lat'){q=cur.de+' — как читается?';a='['+cur.lat.v+']';
+    extra='<div class="lathint">'+e(cur.lat.hint)+'</div>';hint='произнеси вслух'}
+  else{
+    var s=curLvl==='s1'?cur.s1:(curLvl==='s3'?cur.s3:cur.s2);
+    q=s.ru;a=curLvl==='perf'?cur.s2.perf:(curLvl==='prat'?cur.s2.prat:s.de);
+    if(curLvl==='perf')hint='скажи в PERFEKT — вслух';
+    if(curLvl==='prat')hint='скажи в PRÄTERITUM — вслух';
+    extra='<div class="kru">'+e(cur.de)+' <span class="krek">'+e(cur.rek)+'</span></div>';
+    if(curLvl==='perf')extra+='<div class="sru">Präteritum: '+e(cur.s2.prat)+'</div>';
+    if(curLvl==='prat')extra+='<div class="sru">Perfekt: '+e(cur.s2.perf)+'</div>'}
+  if(!shown){
+    b.innerHTML='<div class="hint">'+hint+'</div><div class="prompt">'+e(q)+'</div>';
+    n.innerHTML='<button class="p" id="reveal">Сказал — показать</button>';
+    document.getElementById('reveal').onclick=function(){shown=true;renderDrill()}}
+  else{
+    b.innerHTML='<div class="answer">'+e(a)+'</div>'+extra+
+      (GLOSS[cur.de]?'<div class="gloss"><b>Слова в предложениях</b>'+e(GLOSS[cur.de])+'</div>':'')+
+      '<div class="trap">'+e(cur.trap)+'</div>';
+    n.innerHTML='<button class="r" id="no">Не знал</button><button id="hear">🔊</button>'+
+      '<button class="g" id="yes">Знал точно</button>';
+    document.getElementById('no').onclick=function(){grade(0)};
+    document.getElementById('yes').onclick=function(){grade(1)};
+    document.getElementById('hear').onclick=function(){speakOne(a)}}}
+function grade(ok){box[cur.key]=ok?Math.min(4,(box[cur.key]||0)+1):0;save();done++;nextDrill()}
+document.addEventListener('keydown',function(ev){if(mode!=='drill')return;
+  if(ev.code==='Space'){ev.preventDefault();if(!shown){shown=true;renderDrill()}}
+  if(shown&&ev.key==='1')grade(0);if(shown&&ev.key==='2')grade(1)});
+
+/* ---------- Speech ---------- */
+var voices=[],playing=false,aTimer=null,wake=null;
+function initVoices(){
+  voices=speechSynthesis.getVoices();
+  var de=voices.filter(function(v){return /^de/i.test(v.lang)});
+  var ru=voices.filter(function(v){return /^(ru|uk)/i.test(v.lang)});
+  var s1=document.getElementById('vde'),s2=document.getElementById('vru');
+  var k1=s1.value,k2=s2.value;
+  s1.innerHTML=de.map(function(v){return '<option value="'+v.name+'">'+v.name+'</option>'}).join('');
+  s2.innerHTML='<option value="">— без озвучки, только текст —</option>'+
+    ru.map(function(v){return '<option value="'+v.name+'">'+v.name+'</option>'}).join('');
+  if(k1)s1.value=k1;if(k2)s2.value=k2;
+  document.getElementById('voicewarn').innerHTML=de.length?'':
+   '<div class="warn"><b>Немецкий голос не найден.</b> Поставь его в системе, это две минуты:<br>'+
+   'Windows → Параметры → Время и язык → Речь → Добавить голоса → Deutsch<br>'+
+   'macOS / iOS → Настройки → Универсальный доступ → Устный контент → Голоса → Deutsch<br>'+
+   'Android → Настройки → Специальные возможности → Синтез речи → языки<br>'+
+   'Потом перезагрузи страницу.</div>'}
+speechSynthesis.onvoiceschanged=initVoices;
+function say(text,lang,voice,rate){
+  return new Promise(function(res){
+    if(!text||(!voice&&lang!=='de-DE')){res();return}
+    var u=new SpeechSynthesisUtterance(text);u.lang=lang;u.rate=rate||0.9;
+    var v=voices.filter(function(x){return x.name===voice})[0];if(v)u.voice=v;
+    var fin=false,d=function(){if(!fin){fin=true;res()}};
+    u.onend=d;u.onerror=d;speechSynthesis.speak(u);
+    setTimeout(d,Math.max(3500,text.length*150/(rate||0.9)))})}
+function speakOne(t){try{speechSynthesis.cancel()}catch(e){}
+  say(t,'de-DE',document.getElementById('vde').value,0.85)}
+function readCard(v){if(!v)return;var dv=document.getElementById('vde').value;
+  try{speechSynthesis.cancel()}catch(e){}
+  (function(){var seq=[v.de+', '+v.rek,v.forms.pra+', '+v.forms.prat+', '+v.forms.perf,
+    v.s1.de,v.s2.perf,v.s2.prat,v.s3.de],i=0;
+   function nx(){if(i>=seq.length)return;say(seq[i++],'de-DE',dv,0.82).then(nx)}nx()})()}
+function countdown(sec){return new Promise(function(res){var n=sec,t=document.getElementById('atimer');
+  t.textContent=n;aTimer=setInterval(function(){n--;t.textContent=n>0?n:'';
+    if(n<=0){clearInterval(aTimer);res()}},1000)})}
+
+async function loopAudio(){
+  var body=document.getElementById('abody'),now=document.getElementById('anow');
+  var g=function(){return +document.getElementById('gap').value};
+  var rt=function(){return parseFloat(document.getElementById('rate').value)};
+  var rp=function(){return +document.getElementById('rep').value};
+  var dv=function(){return document.getElementById('vde').value};
+  var rv=function(){return document.getElementById('vru').value};
+  var bodyRu=function(h,t){body.innerHTML='<div class="hint">'+h+'</div><div class="prompt">'+e(t)+'</div>'};
+  var bodyDe=function(t,sub){body.innerHTML='<div class="answer">'+e(t)+'</div>'+(sub||'')};
+  var sayDe=async function(t){for(var i=0;i<rp();i++){if(!playing)return;await say(t,'de-DE',dv(),rt());
+    await new Promise(function(r){setTimeout(r,400)})}};
+  while(playing){
+    var v=pick();if(!v)break;
+    var m=document.getElementById('amode').value,lv=document.getElementById('alevel').value;
+    var lvl=lv==='all'?['s1','s2','s3'][Math.floor(Math.random()*3)]:lv;
+    var s=lvl==='s2'?{de:v.s2.perf,ru:v.s2.ru}:v[lvl];
+    now.textContent=v.npre+'  ·  '+v.de;
+    if(m==='full'){
+      bodyDe(v.de+'  '+v.rek,'<div class="kru">'+e(v.ru)+'</div><div class="lat">['+e(v.lat.v)+']</div>');
+      await say(v.de+', '+v.rek,'de-DE',dv(),0.8);if(!playing)break;
+      await say(v.ru,'ru-RU',rv(),1);if(!playing)break;
+      await say(v.forms.pra+', '+v.forms.prat+', '+v.forms.perf,'de-DE',dv(),0.8);if(!playing)break;
+      var pairs=[[v.s1.ru,v.s1.de],[v.s2.ru,v.s2.perf],[v.s2.ru,v.s2.prat],[v.s3.ru,v.s3.de]];
+      for(var j=0;j<pairs.length;j++){
+        bodyRu('скажи по-немецки',pairs[j][0]);
+        await say(pairs[j][0],'ru-RU',rv(),1);if(!playing)break;
+        await countdown(g());if(!playing)break;
+        bodyDe(pairs[j][1]);await sayDe(pairs[j][1]);if(!playing)break}
+    } else if(m==='satz'){
+      bodyRu('скажи по-немецки',s.ru);
+      await say(s.ru,'ru-RU',rv(),1);if(!playing)break;
+      await countdown(g());if(!playing)break;
+      bodyDe(s.de,'<div class="kru">'+e(v.de)+' '+e(v.rek)+'</div>');
+      await sayDe(s.de);
+    } else if(m==='rek'){
+      bodyRu('какой предлог и падеж?',v.de+' — '+v.ru);
+      await say(v.de,'de-DE',dv(),0.8);if(!playing)break;
+      await say(v.ru,'ru-RU',rv(),1);if(!playing)break;
+      await countdown(g());if(!playing)break;
+      bodyDe(v.de+' '+v.rek,'<div class="kru">'+e(v.kasus)+' · '+e(v.wo)+' / '+e(v.da)+'</div>');
+      await say(v.de+' '+v.rek.replace(/\+/g,''),'de-DE',dv(),0.75);if(!playing)break;
+      await say(v.s1.de,'de-DE',dv(),rt());
+    } else if(m==='forms'){
+      bodyRu('назови три формы',v.de+' — '+v.ru);
+      await say(v.de,'de-DE',dv(),0.8);if(!playing)break;
+      await countdown(g());if(!playing)break;
+      bodyDe(v.forms.pra+' · '+v.forms.prat+' · '+v.forms.perf,
+             '<div class="sru">'+e(v.forms.praL)+' · '+e(v.forms.pratL)+' · '+e(v.forms.perfL)+'</div>');
+      await say(v.forms.pra+', '+v.forms.prat+', '+v.forms.perf,'de-DE',dv(),0.75);
+    } else if(m==='past'){
+      bodyRu('скажи в прошедшем — обе формы',v.s2.ru);
+      await say(v.s2.ru,'ru-RU',rv(),1);if(!playing)break;
+      await countdown(g()+2);if(!playing)break;
+      bodyDe(v.s2.perf,'<div class="sru">PERFEKT — так говоришь на Sprechen</div>');
+      await say(v.s2.perf,'de-DE',dv(),rt());if(!playing)break;
+      bodyDe(v.s2.prat,'<div class="sru">PRÄTERITUM — так пишешь в Forumsbeitrag</div>');
+      await say(v.s2.prat,'de-DE',dv(),rt());
+    } else {
+      bodyDe(s.de,'<div class="sru">'+e(s.ru)+'</div>');
+      await say(s.de,'de-DE',dv(),rt());if(!playing)break;
+      await countdown(Math.max(3,g()-1));if(!playing)break;
+      await say(s.de,'de-DE',dv(),rt())}
+    if(!playing)break;
+    box[v.key]=Math.min(4,(box[v.key]||0)+1);save();
+    document.getElementById('atimer').textContent='';
+    await new Promise(function(r){setTimeout(r,700)})}
+  now.textContent=''}
+function stopAudio(){playing=false;if(aTimer)clearInterval(aTimer);
+  try{speechSynthesis.cancel()}catch(e){}
+  if(wake){try{wake.release()}catch(e){}wake=null}
+  var b=document.getElementById('aplay');if(b)b.textContent='▶ Старт'}
+document.getElementById('aplay').onclick=async function(){
+  if(playing){stopAudio();return}
+  if(!voices.length)initVoices();
+  try{if(navigator.wakeLock)wake=await navigator.wakeLock.request('screen')}catch(e){}
+  playing=true;this.textContent='⏸ Стоп';loopAudio()};
+document.getElementById('askip').onclick=function(){
+  try{speechSynthesis.cancel()}catch(e){};if(aTimer)clearInterval(aTimer)};
+document.addEventListener('visibilitychange',function(){
+  if(!document.hidden&&playing&&navigator.wakeLock&&!wake){
+    navigator.wakeLock.request('screen').then(function(w){wake=w}).catch(function(){})}});
+initVoices();nextDrill();
+/* ---------- Переключение модулей ---------- */
+document.querySelectorAll('.mod').forEach(function(m){m.onclick=function(){
+  document.querySelectorAll('.mod').forEach(function(x){x.classList.remove('on')});m.classList.add('on');
+  var id=m.dataset.mod;
+  document.getElementById('mod-verben').style.display=id==='verben'?'':'none';
+  document.getElementById('mod-schalt').style.display=id==='schalt'?'':'none';
+  stopAudio();if(id==='schalt')nextCheck()}});
+
+/* ---------- Переключатели: список ---------- */
+function swHtml(s,i){
+ return '<div class="sw"><button class="speak" data-sw="'+i+'">🔊 вслух</button>'+
+  '<h3>'+e(s.w)+'</h3><span class="swlat">['+e(s.lat)+']</span>'+
+  '<div class="swru">'+e(s.ru)+'</div>'+
+  '<div class="swtut">'+e(s.tut)+'</div>'+
+  '<div class="pairs"><div class="p-oh"><div class="lb">без него</div>'+
+   '<div class="de">'+e(s.ohne)+'</div><div class="ru">'+e(s.ohneRu)+'</div></div>'+
+   '<div class="p-mi"><div class="lb">с ним</div>'+
+   '<div class="de">'+e(s.mit)+'</div><div class="ru">'+e(s.mitRu)+'</div></div></div></div>'}
+document.getElementById('slist').innerHTML=SCHALT.map(swHtml).join('');
+document.querySelectorAll('[data-sw]').forEach(function(b){b.onclick=function(){
+  var s=SCHALT[+b.dataset.sw];try{speechSynthesis.cancel()}catch(err){}
+  say(s.ohne,'de-DE',document.getElementById('vde').value,0.85)
+    .then(function(){return say(s.mit,'de-DE',document.getElementById('vde').value,0.85)})}});
+
+/* ---------- Переключатели: вкладки ---------- */
+document.querySelectorAll('.stab').forEach(function(t){t.onclick=function(){
+  document.querySelectorAll('.stab').forEach(function(x){x.classList.remove('on')});t.classList.add('on');
+  var id=t.dataset.s;
+  document.getElementById('sliste').style.display=id==='sliste'?'':'none';
+  document.getElementById('scheck').style.display=id==='scheck'?'':'none';
+  if(id==='scheck')nextCheck()}});
+
+/* ---------- Переключатели: проверка richtig / falsch ---------- */
+var sbox={},sCur=null,sDone=0;
+try{var ss=localStorage.getItem('schalt2');if(ss)sbox=JSON.parse(ss)}catch(err){}
+function sSave(){try{localStorage.setItem('schalt2',JSON.stringify(sbox))}catch(err){}}
+function sPick(){
+  var w=SCHALT.map(function(s,i){return {i:i,w:Math.pow(2,3-(sbox[i]||0))}});
+  var tot=w.reduce(function(a,b){return a+b.w},0),r=Math.random()*tot;
+  for(var k=0;k<w.length;k++){r-=w[k].w;if(r<=0)return w[k].i}return 0}
+function nextCheck(){sCur=sPick();renderCheck(null)}
+function renderCheck(answer){
+  var s=SCHALT[sCur],b=document.getElementById('sbody'),n=document.getElementById('sbtns');
+  var strong=SCHALT.filter(function(_,i){return (sbox[i]||0)>=3}).length;
+  document.getElementById('sbar').style.width=(strong/SCHALT.length*100)+'%';
+  document.getElementById('scount').textContent='Освоено '+strong+' из '+SCHALT.length;
+  document.getElementById('sdone').textContent='За сессию: '+sDone;
+  if(answer===null){
+    b.innerHTML='<div class="hint">верно ли утверждение?</div>'+
+      '<div class="satzde">'+e(s.pruef.de)+'</div>'+
+      '<div class="claim">'+e(s.pruef.be)+'</div>';
+    n.innerHTML='<button class="g" id="sja">Верно</button><button class="r" id="snein">Неверно</button>';
+    document.getElementById('sja').onclick=function(){renderCheck(true)};
+    document.getElementById('snein').onclick=function(){renderCheck(false)}}
+  else{
+    var right=(answer===s.pruef.ok);
+    sbox[sCur]=right?Math.min(4,(sbox[sCur]||0)+1):0;sSave();sDone++;
+    b.innerHTML='<div class="verdict '+(right?'v-ok':'v-no')+'">'+
+      (right?'Верно — так и есть':'Мимо')+'</div>'+
+      '<div class="satzde">'+e(s.pruef.de)+'</div>'+
+      '<div class="claim" style="font-size:14px;color:var(--tx2)">'+e(s.pruef.be)+
+      ' — <b style="color:'+(s.pruef.ok?'var(--ok)':'var(--bad)')+'">'+
+      (s.pruef.ok?'верно':'неверно')+'</b></div>'+
+      '<div class="gloss"><b>'+e(s.w)+' — '+e(s.ru)+'</b>'+e(s.pruef.erkl)+'</div>';
+    n.innerHTML='<button id="shear">🔊</button><button class="p" id="sweiter">Дальше →</button>';
+    document.getElementById('sweiter').onclick=nextCheck;
+    document.getElementById('shear').onclick=function(){
+      try{speechSynthesis.cancel()}catch(err){}
+      say(s.pruef.de,'de-DE',document.getElementById('vde').value,0.85)}}}
+nextCheck();
+
+</script>
+<script>
+/* элементы уже существуют — включаем интерфейс */
+document.getElementById('nojs').style.display='none';
+document.getElementById('mods').style.display='flex';
+document.getElementById('tabs').style.display='flex';
+document.getElementById('stabs').style.display='flex';
+document.getElementById('mod-schalt').style.display='none';
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('./sw.js').catch(function () {});
+  });
+}
+</script>
+</body>
+</html>
